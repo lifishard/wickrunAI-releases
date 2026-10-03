@@ -1,0 +1,101 @@
+wickrunAI (灯芯AI) Software License
+
+Copyright (c) 2026 the copyright holder of wickrunAI. All rights reserved.
+
+This license applies to wickrunAI version 4.1.1 and later, including its installers,
+application files, source code and documentation (the "Software"). Copies of version
+4.1.0 and earlier that were obtained under the Apache License, Version 2.0 remain
+under that license; this license does not take any right away from those copies.
+
+By installing or using the Software you agree to this license. If you do not agree,
+do not install or use it.
+
+1. License to use
+
+   You may download, install and use the Software, free of charge, on devices that
+   you own or control, for your personal use or for the internal purposes of your
+   organization. You may make the copies needed to install, run and back up the
+   Software.
+
+2. Restrictions
+
+   Unless the copyright holder agrees in writing, you may not:
+   (a) sell, rent, lease, sublicense, distribute, publish or otherwise make the
+       Software available to others, except by pointing them to the official
+       download page (https://wickrunai.com/download) or the official releases
+       repository (https://github.com/lifishard/wickrunAI-releases);
+   (b) modify the Software or create derivative works of it;
+   (c) reverse engineer, decompile or disassemble the Software, except to the extent
+       that applicable law expressly permits it despite this restriction;
+   (d) remove or alter any copyright, trademark or license notice; or
+   (e) circumvent technical limits of the Software or of the online services it
+       connects to.
+
+   Having access to the source code of the Software (for example, in a repository)
+   does not give you any additional rights to it.
+
+3. Third-party components
+
+   The Software includes open-source components that are licensed to you under their
+   own licenses, listed with their texts in THIRD_PARTY_LICENSES.txt and summarized
+   in NOTICE. Nothing in this license limits your rights under those licenses.
+
+4. Online services and AI providers
+
+   Cloud accounts, sync, sharing and any paid features are online services governed
+   by the wickrunAI Terms of Service and Privacy Policy published at
+   https://wickrunai.com. When you connect the Software to an AI model or other
+   third-party service with your own API key, your use of that service is governed by
+   that provider's terms, and the provider's fees are yours.
+
+5. Ownership
+
+   The Software is licensed, not sold. The copyright holder keeps all rights, title
+   and interest in the Software, including the names wickrunAI and 灯芯AI, except the
+   rights expressly granted above. Your files, conversations and other content remain
+   yours.
+
+6. No warranty
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+   INCLUDING THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+   NON-INFRINGEMENT, TO THE MAXIMUM EXTENT PERMITTED BY LAW. Content produced by AI
+   models may be inaccurate. Actions that the Software takes on files, programs or
+   websites you authorize can change or delete data; review them and keep backups.
+
+7. Limitation of liability
+
+   TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE COPYRIGHT HOLDER IS NOT LIABLE FOR ANY
+   INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR PUNITIVE DAMAGES, OR FOR LOSS OF
+   DATA, PROFITS OR GOODWILL, ARISING FROM THE SOFTWARE OR THIS LICENSE. Some
+   jurisdictions do not allow these limitations; in that case they apply only to the
+   extent permitted, and your statutory consumer rights are not affected.
+
+8. Termination
+
+   This license ends automatically if you breach it. When it ends, you must stop
+   using the Software and delete your copies.
+
+9. Governing law
+
+   This license is governed by the laws of the Province of British Columbia and the
+   federal laws of Canada that apply there. The courts of British Columbia have
+   non-exclusive jurisdiction over any dispute about it.
+
+10. Contact
+
+   admin@wickrunai.com
+
+---------------------------------------------------------------------------------
+中文说明（仅供参考，以上英文版本为准）
+
+自 4.1.1 起，wickrunAI（灯芯AI）不再以 Apache-2.0 开源，保留所有权利。4.1.0 及更早
+版本依 Apache-2.0 取得的副本仍适用 Apache-2.0。安装或使用本软件即表示你同意本许可；
+不同意的，请不要安装或使用。你可以免费下载、安装并在自己拥有或
+控制的设备上使用本软件，用于个人或所在组织内部用途；未经书面许可，不得转售、出租、
+再分发（转发官方下载页或官方发布仓库链接除外）、修改、在法律允许范围之外反向工程，
+或删除版权与许可声明。软件中的开源组件按其各自许可证授权，见 THIRD_PARTY_LICENSES.txt
+与 NOTICE。云账号、同步、共享与付费功能另受服务条款与隐私政策约束；你用自己的 API 密钥
+连接的 AI 服务受该服务商条款约束。软件按“现状”提供，AI 生成内容可能不准确，请检查
+软件对文件和网站执行的操作并保留备份。适用加拿大不列颠哥伦比亚省法律。联系：
+admin@wickrunai.com。
