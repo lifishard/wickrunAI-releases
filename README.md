@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.14.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.15.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,17 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.15.0 — Instant updates while the app is open; one document editor with tables, charts and annotations
+
+Shared items and cloud sync now update the moment something changes, and every document surface uses the same editor.
+
+- **Live updates.** The server pushes "something changed" over a server-sent event channel; shared conversations, comments, hand-offs and boards refresh at once, and other devices sync right away instead of up to a minute later. Polling stays only as a 30-second fallback.
+- **One editor.** Markdown artifacts, shared text files and project docs share a block editor: tables, task lists, images, code and echarts charts (a small JSON block the model can read and write). The composer still recognises Markdown as before.
+- **Annotate for the model.** Select text, write what should change, and send all annotations to the model in one request; in shared files an annotation becomes a comment anchored to the text.
+- **Co-editing without losing work.** When someone else saves a shared text file while you are editing, their blocks merge into your draft; only the same block changed by both is marked as a conflict. Merging happens on your device before the end-to-end encrypted upload.
+
+See the [4.15.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.15.0.md).
 
 ## 4.14.0 — Open Claude and ChatGPT / Codex share links; fewer dead ends in Agent teams
 
