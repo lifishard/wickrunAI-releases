@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.10.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.11.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,18 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.11.0 — Previews stay offline; team claims seen both ways; web and Android ask like the desktop
+
+This update closes gaps listed as unfinished in earlier release notes. A generated HTML preview can no longer reach the network, two computers running the same team project now see each other's running task, and the web and Android apps decide which actions to ask about with the same rules as the desktop.
+
+- **Previews stay offline.** Model-generated HTML and SVG previews run with no sandbox permissions and a content policy that allows only embedded resources, so a remote image address can no longer carry what the model has read out of the app. The desktop also blocks the preview frame from navigating anywhere.
+- **Team claims both ways.** When the same project is restored on two computers, the one that does not host it now publishes its running tasks too, so neither starts a task the other is running, and phones show which computer is running it.
+- **Web and Android ask like the desktop.** "Auto-approve edits" lets only file edits and clicks through; the first visit to a new website after reading local files asks first; writes to files that git, npm or CI run automatically always ask. The web's own team store now also waits for the human acceptance of a predecessor task.
+- **Butler limits keep the newest records.** After a sync, the caps on goals, briefs, skills, jobs and feedback drop the oldest entries instead of whichever the server listed last, and the account window lists which items conflict, not only how many.
+- **Android catches up.** The Android line carries 4.10.0's parallel chats, scanned-PDF import and denser conversation, plus this release's fixes.
+
+See the [4.11.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.11.0.md).
 
 ## 4.10.0 — Parallel chats stop waiting on each other; any PDF can be read
 
