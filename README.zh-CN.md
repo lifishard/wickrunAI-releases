@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.13.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.14.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,17 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.14.0 — 直接打开 Claude、ChatGPT / Codex 的分享链接；Agent 团队少了三个死胡同
+
+把 Claude 或 ChatGPT（对话或 Codex 任务）的分享链接贴进输入框，它会打开成一段本地对话，用你自己的模型接着聊。Agent 团队去掉了三个新手容易卡住的地方。
+
+- **分享链接打开成对话。** `claude.ai/share/…`、`chatgpt.com/share/…`、`chatgpt.com/s/…` 按原来的用户 / 助手轮次读回来，标题取分享的名字，原链接留在顶部。桌面版在隐藏的浏览器窗口里读页面，能过站点的人机验证；网页版和 Android 走服务器，被站点拒绝时会明确说明。本版尚未在真实页面上验证，遇到读不出来的请反馈。
+- **验收标准可选。** 没写「怎样算做好」的任务用一条朴素默认标准，仍由你验收。
+- **指定了负责人也能快速准备。** 负责人就是执行成员，只补上讨论或复核的搭档。
+- **运行自动保存版本。** 没保存过版本的流程直接从草稿运行；设计器里草稿更新后运行会自动存新版本。
+
+详见 [4.14.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.14.0.md)。
 
 ## 4.13.0 — 长任务不再被打断；记账不再消耗轮次
 
