@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.10.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.11.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,18 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.11.0 — 预览不再联网；团队认领双向可见；网页版和 Android 的确认规则与桌面版一致
+
+这次处理以往发布说明里列为未完成的几项。模型生成的 HTML 预览不再能联网；两台电脑恢复同一个团队项目时能互相看到对方正在运行的任务；网页版和 Android 判断哪些操作要先问你，用的是和桌面版同一套规则。
+
+- **预览不再联网。** 模型生成的 HTML / SVG 预览不给任何沙箱权限，并加上只允许内嵌资源的内容安全策略，远程图片地址再也带不出应用里读过的内容；桌面版还禁止预览框跳转到别处。
+- **团队认领双向可见。** 同一个项目在两台电脑上恢复时，不托管它的那台也会发布自己正在运行的任务，两台都不会去开始对方正在跑的任务，手机上也能看到是哪台在跑。
+- **网页版和 Android 与桌面版同一套确认规则。** 「自动批准编辑」只放行改文件和网页点击；读过本机内容后第一次访问新网站先问；写入会被 git、npm、CI 自动执行的文件总是先问。网页版自己的协作存储也补上了「前置任务被人工验收后才开始」。
+- **今日管家的数量上限保留最新的。** 同步之后，目标、简报、技能、任务和反馈的上限丢掉的是最旧的一条，而不是服务器排在最后的那条；账号窗口发现冲突时列出具体是哪几项，不只是条数。
+- **Android 跟上。** Android 线带上了 4.10.0 的会话并行、扫描件 PDF 导入和紧凑对话流，以及本版的修复。
+
+详见 [4.11.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.11.0.md)。
 
 ## 4.10.0 — 会话并行不再互相排队；任何 PDF 都能读
 
