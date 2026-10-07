@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.12.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.13.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,16 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.13.0 — Long tasks keep going; bookkeeping stops costing rounds
+
+A task that writes a quiz page from four textbook chapters used to be cut off after 60 minutes with "stage time budget reached" and a stage summary of 0 of 4 conditions, while the model had spent its first rounds filling in milestone forms. This release treats stage budgets as checkpoints and makes the bookkeeping tools forgiving, so the rounds go to the task itself.
+
+- **Stage budgets are checkpoints, not stops.** When the minutes, tokens or tool rounds of a stage run out, the executor checks whether the stage did real work (files written, commands run, pages read). If it did, the next stage opens on its own and the task continues; only a stage with no new real operation pauses, with the reason spelled out. Streaming answers and pending tool calls are never cut off. Team members, ad-hoc subagents and the Butler keep their budgets as hard limits.
+- **Bookkeeping is forgiving.** Missing evidence on a milestone, a completion note or a model review is filled in by the executor from its own record of successful steps; a milestone without a linked check can complete; a milestone whose check has not passed is quietly marked for verification instead of rejected. What still stops a run: claiming completion with no operation at all, answering with only a plan, skipping a requested test or push, or a registered program check that fails.
+- **The stage summary shows real work.** It now says how many operations completed and how many files were written, across how many automatically opened stages, instead of only the checklist count.
+
+See the [4.13.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.13.0.md).
 
 ## 4.12.0 — Android rebuilt on the desktop code
 
