@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.14.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.15.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,17 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.15.0 — App 打开时即时更新；表格、图表、标注合一的文档编辑器
+
+共享内容和云同步现在一有改动就更新，所有文档界面用同一个编辑器。
+
+- **即时更新。** 服务器通过 SSE 推送「什么变了」：共享对话、评论、交接、看板立刻刷新，其他设备马上同步，不再等一分钟；轮询只作 30 秒一次的兜底。
+- **一个编辑器。** Markdown 产物、共享文本文件、项目文档共用块编辑器：表格、任务列表、图片、代码和 echarts 图表（一小段模型可读可写的 JSON）。输入框照旧自动识别 Markdown。
+- **标注给模型。** 选中文字写意见，攒起来一次发给模型；共享文件里的标注就是锚到原文的评论。
+- **共同编辑不丢改动。** 别人保存共享文本文件时，他的块合并进你的草稿；只有同一块两边都改才标冲突。合并在本机完成，之后才端到端加密上传。
+
+详见 [4.15.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.15.0.md)。
 
 ## 4.14.0 — 直接打开 Claude、ChatGPT / Codex 的分享链接；Agent 团队少了三个死胡同
 
