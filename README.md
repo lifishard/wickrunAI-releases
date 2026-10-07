@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.13.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.14.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,17 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.14.0 — Open Claude and ChatGPT / Codex share links; fewer dead ends in Agent teams
+
+Paste a share link from Claude or ChatGPT (conversation or Codex task) into the composer and it opens as a local conversation you can continue with your own model. Agent teams lose three places where a first-time user used to get stuck.
+
+- **Share links open as conversations.** `claude.ai/share/…`, `chatgpt.com/share/…` and `chatgpt.com/s/…` are read back with their user and assistant turns, titled after the share, with the original link kept at the top. The desktop reads the page in a hidden browser window so it passes the sites' bot checks; the web and Android lines ask the server and say so when the site refuses a server. This release has not yet been verified against real pages; please report what fails.
+- **Acceptance is optional.** A delivery task saved without "what does good look like" gets a plain default and is still accepted by you.
+- **An assigned owner works with quick setup.** The owner becomes the executor; only the discussion or review partner is added.
+- **Running saves the version.** A flow without a saved version runs from its draft; the designer saves a new version when the draft moved on.
+
+See the [4.14.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.14.0.md).
 
 ## 4.13.0 — Long tasks keep going; bookkeeping stops costing rounds
 
