@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.12.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.13.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,16 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.13.0 — 长任务不再被打断；记账不再消耗轮次
+
+一个从教材四章生成互动习题页面的任务，此前会在 60 分钟到时被「本阶段达到时间预算」打断，阶段结论写着 0/4 项条件通过，而模型把前几轮花在了填里程碑表格上。本版把阶段预算改为检查点，把记账工具改宽松，让轮次用在任务本身。
+
+- **阶段预算是检查点，不是停止。** 一个阶段的分钟数、token 或工具轮次用完时，执行器看这一阶段有没有真正做事（写文件、运行命令、读取页面）。有就自动开下一阶段接着做；只有一个阶段里没有任何新的有效操作才暂停，并写明原因。正在流式返回的回答和刚发出的工具调用不会被切断。团队成员、临时子代理和今日管家的预算仍是上限。
+- **记账宽松。** 里程碑、完成自查、模型复核漏填的证据由执行器按成功步骤补上；没有关联验收的里程碑可以完成；验收没过的里程碑静默记为待核实而不是拒绝。仍会停下的只有：一步没做就说完成、只回一句计划、跳过明确要求的测试或推送、登记过的程序核验没通过。
+- **阶段结论显示实际工作。** 现在写明完成了多少步操作、写出多少文件、跨了几个自动开启的阶段，而不只是清单数。
+
+详见 [4.13.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.13.0.md)。
 
 ## 4.12.0 — Android 改为与桌面版同源
 
