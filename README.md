@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.11.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.12.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,17 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.12.0 — Android rebuilt on the desktop code
+
+The Android app had been a separate copy of the code since around 4.0, so most of what shipped after 4.4 never reached phones. From this release the Android line is the desktop code plus a thin mobile layer, so phones carry the same features and fixes as desktop and web.
+
+- **Same code as desktop.** The Android line now starts from the desktop source and adds back only what is mobile: account-scoped storage, the system keystore, the phone file picker, the phone layout and the phone-side Butler collector. The native Android and iOS projects are unchanged.
+- **What phones gain.** Agent-team tasks synced from your computer with acceptance on the phone, team claims seen both ways, Claudex remote view and decisions, the cloud file library, the credit panel, smart search, result versions and human acceptance, 4.10.0's parallel chats and scanned-PDF import, and 4.11.0's offline previews and approval rules. Work that needs the computer's own tools still says it runs on the desktop, as on the web.
+- **Butler control always checks the account.** A control call can no longer skip the signed-in account and session check, on every platform.
+- **License texts inside the app.** The Android build ships the license, the notice and the full third-party license text.
+
+See the [4.12.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.12.0.md).
 
 ## 4.11.0 — Previews stay offline; team claims seen both ways; web and Android ask like the desktop
 
