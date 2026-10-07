@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.11.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.12.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,17 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.12.0 — Android 改为与桌面版同源
+
+Android 应用大约从 4.0 起就是一份独立的代码，4.4 之后的大部分功能都没有进入手机。从这一版起，Android 线就是桌面版代码加上一层很薄的移动端适配，手机与桌面、网页拥有同样的功能和修复。
+
+- **与桌面版同源。** Android 线以桌面版源码为基础，只放回移动端自己的部分：按账号隔离的存储、系统密钥库、手机文件选择、手机布局和手机端管家采集。Android 与 iOS 原生工程不变。
+- **手机新增的功能。** 电脑同步来的 Agent 团队任务及在手机上验收、团队认领双向可见、Claudex 远程查看与决定、云文件库、额度面板、智能搜索、成果版本与人工验收，以及 4.10.0 的会话并行和扫描件 PDF、4.11.0 的预览沙箱与确认规则。需要电脑本机工具的部分仍提示在桌面版运行，与网页版一致。
+- **管家控制调用总是核对账号。** 各平台的控制调用都不能再跳过当前登录账号和会话的核对。
+- **安装包内附许可文本。** Android 安装包带上许可协议、声明和完整的第三方许可文本。
+
+详见 [4.12.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.12.0.md)。
 
 ## 4.11.0 — 预览不再联网；团队认领双向可见；网页版和 Android 的确认规则与桌面版一致
 
