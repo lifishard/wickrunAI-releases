@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.9.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.10.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,17 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.10.0 — Parallel chats stop waiting on each other; any PDF can be read
+
+Three things a person hit daily. A chat no longer queues behind another chat that happens to work in the same folder: each runs on its own route and model, and only the moment of writing a file takes turns. A PDF is never refused for lacking a text layer: scanned and slide-image PDFs come in as page images that a vision model reads directly. And the conversation shows more per screen.
+
+- **Chats run in parallel in the same folder.** The run-wide workspace lock is gone, along with "waiting for … to release the workspace". File-writing tool calls (write, edit, delete, write document) on overlapping folders take turns one call at a time across chats; reading, thinking, commands and other tools stay parallel.
+- **Every PDF comes in.** Extractable text is attached as before; pages without a text layer (up to 20) are rendered to images and attached, in the desktop picker, drag and drop, paste, the web and the phone. Rendering is an enhancement: if it fails, the text and the local path still arrive.
+- **Optional marker conversion.** `read_document` uses [marker](https://github.com/datalab-to/marker) for layout analysis and OCR when the built-in extraction finds no text and marker is installed on this computer (`pip install marker-pdf`). It is never bundled, never downloaded, and never blocks anything: missing, failed or timed-out runs fall back to the built-in result.
+- **A denser conversation.** Answer text and spacing are tighter, the input box is one line with smaller controls, and stream/effort sit in the bottom bar instead of a row of their own.
+
+See the [4.10.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.10.0.md).
 
 ## 4.9.0 — Team tasks across devices and accounts; uploads signed with type and size
 
