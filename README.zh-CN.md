@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.9.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.10.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,17 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.10.0 — 会话并行不再互相排队；任何 PDF 都能读
+
+三件每天都会碰到的事。一个会话不再因为另一个会话恰好在同一目录里执行而排队：各走各的路由和模型，只有写文件那一下逐次落盘。PDF 不再因为没有文字层被拒收：扫描件和图片版幻灯片以页面图片带进对话，能看图的模型直接阅读。对话流一屏能看到更多内容。
+
+- **同一目录里的会话并行。** 去掉整轮运行级别的工作目录独占和「等待「…」释放工作目录」。写文件类工具（写、改、删文件、生成文档）在重叠目录上跨会话一次一个执行；读文件、思考、命令和其他工具照常并行。
+- **所有 PDF 都能带进来。** 抽得到的文字照常附上；没有文字层的页面（最多 20 页）渲染成图片随附，桌面文件选择、拖放、粘贴、网页和手机端都一样。渲染只是增强：失败了，文字和本地路径照样带上。
+- **可选的 marker 转换。** 内置抽取读不到文字、且本机装了 [marker](https://github.com/datalab-to/marker)（`pip install marker-pdf`）时，`read_document` 用它做版面分析和 OCR。不随安装包分发、不自动下载、不阻塞任何操作：没装、失败或超时都退回内置结果。
+- **对话流更紧凑。** 回答正文和间距收紧，输入框默认一行、控件变小，流式 / 思考强度并进底栏，不再单独占一行。
+
+详见 [4.10.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.10.0.md)。
 
 ## 4.9.0 — 团队任务跨设备、跨账号，上传签名绑定类型与大小
 
