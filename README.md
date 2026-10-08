@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.17.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.18.1-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,18 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.18.0 — A focused shared conversation; a theme / font size / language capsule; a collapsible sidebar header; whole Claude Code sessions
+
+A shared conversation now shows only the thread and one composer, with discussion, access and history opened on demand; the item list collapses. The same quick capsule for theme, font size and language sits in chat, the shared space and the Agent team. The sidebar header folds away to show more conversations.
+
+- **Focused conversation.** The shared conversation page reads like a messenger: title row, thread, one composer; extras open on demand.
+- **Quick capsule.** Light / dark, A− / A+ font size, 简 / 繁 / EN; the full options stay in Settings.
+- **Sidebar header ⌃.** Folds the project picker, workspace switch, Butler card and navigation; remembered in Settings.
+- **Copy to my workspace.** A shared conversation becomes a plain conversation in "Recent", with an "Open" button in the notice; no extra project is created.
+- **Claude Code sessions.** The session page is a virtualized list; the import now scrolls through it screen by screen and extends its deadline while reading.
+
+See the [4.18.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.18.0.md).
 
 ## 4.17.0 — Check roles before saving an import; the composer's model picker in the shared thread; an action menu on shared items
 
