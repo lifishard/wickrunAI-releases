@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.17.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.18.1-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,18 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.18.0 — 共享空间专注对话；主题 / 字号 / 语言快捷胶囊；侧栏头部可折起；Claude Code 会话读完整
+
+共享对话打开后只剩对话和输入框，讨论、访问权限、变更记录点开才出现；左栏可折起。主题、字号、语言三处（聊天、群组与共享、Agent 团队）都有同一个快捷胶囊。侧栏头部一键折起，多看几条对话。
+
+- **专注对话。** 共享对话页面像聊天软件：标题行、对话、一个输入框；附带内容按需展开。
+- **快捷胶囊。** 浅 / 深色、A− / A+ 字号、简 / 繁 / EN，设置里的完整选项不变。
+- **侧栏头部 ⌃。** 折起项目选择、工作区切换、管家卡片和导航，记在设置里。
+- **复制到我的工作区。** 共享对话直接变成一条对话出现在「最近对话」里，提示里有「打开」；不再替它另建项目。
+- **Claude Code 会话。** 会话页是虚拟列表，现在一屏一屏滚着读完整个会话，长会话时限自动顺延。
+
+详见 [4.18.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.18.0.md)。
 
 ## 4.17.0 — 导入的对话先核对角色；发送方式换成输入框同款模型选择器；共享内容有操作菜单
 
