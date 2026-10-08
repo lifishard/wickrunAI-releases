@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.16.4-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.17.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,17 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.17.0 — Check roles before saving an import; the composer's model picker in the shared thread; an action menu on shared items
+
+Pages without role markers, such as Codex tasks, came in with some turns reversed; an import whose roles were inferred now opens a review panel first. The shared thread's "send as" is no longer a dropdown with hundreds of entries but the same picker as the composer. Every shared item has a ⋯ menu.
+
+- **Roles are checked before saving.** An import whose roles were inferred from the order opens "Check the roles, then save": each turn can be set to user / assistant, "Swap all" flips them, and nothing is saved until confirmed; roles cannot change once saved.
+- **The composer's picker.** "Chat, no AI" or "Let a model reply"; the latter uses the same credential → model picker as the composer (searchable, chat models only by default), including the official route once it is registered.
+- **Actions on shared items.** Copy to my workspace, copy into a project…, save as file (Markdown or wickrunAI JSON), access, delete (owner, with confirmation).
+- **Claude Code session pages.** The diagnosis now names the address, the whole page's text size, iframe count and the first few words; after sign-in the page gets 90 seconds; same-origin iframes are read too. Real error text is still needed to adapt to the page.
+
+See the [4.17.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.17.0.md).
 
 ## 4.16.0 — Claude, ChatGPT and Codex links go into the shared space; private pages ask you to sign in
 
