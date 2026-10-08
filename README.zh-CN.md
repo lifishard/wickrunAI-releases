@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.18.1-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.19.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,18 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.19.0 — 导入自己的 Claude 对话和 Claude 项目；导入的记录从此能被回溯
+
+claude.ai 里没有分享入口的内容现在也能进 wickrunAI，而且导入之后不再是一条孤立的对话——它落进项目层，项目里任何对话、任何线路（包括 Claude Code）都能读到。
+
+- **两种新链接。** 粘贴 `claude.ai/chat/…`（自己账号里的对话，Claude 项目里的也是这个地址）或 `claude.ai/project/…`（Claude 项目页）：桌面版弹窗登录一次就能读，优先走数据接口、读不到再读页面。网页版和 Android 无法代表你登录，仍提示去桌面版。
+- **粘贴后先选去处。** 「新对话」或「导入到项目…」；选项目时默认同时转写成一篇项目文档《导入对话：标题》并留一条记忆指针——这正是每轮模型调用都带上的那一层，之后接着干活不用再贴原文。
+- **Claude 项目一键变成 wickrunAI 项目。** 说明→项目规范、知识文件→项目文档、项目内对话勾选批量导入；有进度、可停止、单段失败不拖累其余；重名项目默认并入，重复导入只刷新不重复建。
+- **老记录可以补课。** 导入横幅、侧栏对话 ⋯ 菜单和共享空间都有「存为项目文档」。
+- 边界照实说：claude.ai 的「项目记忆」本体没有导出口，读不到；内部接口未在真实页面验证，读不出时把带诊断的错误发回来即可适配。
+
+详见 [4.19.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.19.0.md)。
 
 ## 4.18.0 — 共享空间专注对话；主题 / 字号 / 语言快捷胶囊；侧栏头部可折起；Claude Code 会话读完整
 
