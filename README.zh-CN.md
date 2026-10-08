@@ -1,6 +1,6 @@
 <div align="center">
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lifishard/wickrunAI/main/public/brand/logo-dark.svg"><img src="https://raw.githubusercontent.com/lifishard/wickrunAI/main/public/brand/logo.svg" width="96" alt="灯芯AI"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://wickrunai.com/brand/logo-dark.svg"><img src="https://wickrunai.com/brand/logo.svg" width="96" alt="灯芯AI"></picture>
 
 # wickrunAI · 灯芯AI
 
