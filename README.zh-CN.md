@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.16.4-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.17.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,17 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.17.0 — 导入的对话先核对角色；发送方式换成输入框同款模型选择器；共享内容有操作菜单
+
+Codex 这类没有角色标记的页面，导入后角色有对有反——现在先进核对面板改好再存。共享对话的「发送方式」不再是几百项的下拉，而是输入框那一个选择器。共享内容列表每项有 ⋯ 菜单。
+
+- **角色先核对再存。** 角色靠先后顺序推断的导入进「核对角色后存入共享空间」面板：每段可改用户 / 助手，可全部对调，确认后才存；存入后角色不能再改。
+- **发送方式同款选择器。** 「聊天 · 不调用 AI」或「让模型回复」；后者用和输入框一样的凭据 → 模型选择器（可搜索、只看聊天模型），登记了官方线路也在里面。
+- **共享内容的操作。** 复制到我的工作区、复制到项目…、存成文件（Markdown / wickrunAI JSON）、访问权限、删除（所有者，确认一步）。
+- **Claude Code 会话页。** 诊断带地址、整页文字量、iframe 数和开头几十个字；登录后等 90 秒；同源 iframe 也读。仍需真实页面的错误原文来适配。
+
+详见 [4.17.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.17.0.md)。
 
 ## 4.16.0 — Claude、ChatGPT / Codex 的链接存进共享空间；私有页面弹窗登录
 
