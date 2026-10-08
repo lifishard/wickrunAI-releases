@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.18.1-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.19.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,18 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.19.0 — Import your own Claude chats and Claude Projects; imports you can actually reach later
+
+Content with no share entry on claude.ai now comes into wickrunAI too — and an import is no longer a stranded conversation: it lands in the Project layer, where every conversation and every route (Claude Code included) can read it.
+
+- **Two new links.** Paste `claude.ai/chat/…` (your own conversation, including ones inside a Claude Project) or `claude.ai/project/…` (a Claude Project page): the desktop app signs you in once in a popup and reads it, data API first, page fallback. The web and Android cannot sign in as you and still point you to the desktop app.
+- **Pick a destination after pasting.** "New conversation" or "Import into a project…"; a project destination also transcribes the chat into a project doc 「导入对话：title」 plus a memory pointer — exactly the layer every model call carries, so you keep working without re-pasting anything.
+- **A Claude Project becomes a wickrunAI project in one pass.** Description → project instructions, knowledge files → project docs, conversations imported by checkbox with progress, stop, and per-item fault tolerance; a same-named project merges by default, and re-importing refreshes instead of duplicating.
+- **Old imports can catch up.** "Save as project doc" lives on the import banner, the conversation ⋯ menu and the shared space.
+- Stated plainly: claude.ai's own Project memory has no export surface and cannot be read; the internal endpoints are unverified against real pages — if a read fails, send back the diagnostic and we adapt, as in 4.16–4.18.
+
+See the [4.19.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.19.0.md).
 
 ## 4.18.0 — A focused shared conversation; a theme / font size / language capsule; a collapsible sidebar header; whole Claude Code sessions
 
