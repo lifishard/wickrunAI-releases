@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.15.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.16.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,17 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.16.0 — Claude、ChatGPT / Codex 的链接存进共享空间；私有页面弹窗登录
+
+在 **群组与共享 → 打开共享链接** 里粘贴 Claude 或 ChatGPT / Codex 的链接，对话会被读回来、按当前空间存成一条共享对话，可以评论、标注、让 AI 接着回。不是公开页面的链接（比如 Claude Code 会话 `claude.ai/code/session_…`）在桌面版会弹出一次登录窗口，登录态保留给以后的链接。
+
+- **共享空间认分享链接。** `claude.ai/share/…`、`chatgpt.com/share/…`、`chatgpt.com/s/…`（对话与 Codex 任务短链接）和 `claude.ai/code/session_…`；输入框认同一组。
+- **私有页面登录一次。** 页面跳到登录时，桌面版把导入窗口显示出来让你登录；登录后回到链接继续读。网页版和 Android 会明确说这类链接要在桌面版打开。
+- **不再只是超时。** 页面打开了但认不出消息块时，错误里写明页面名和页面上找到了什么，便于把结构报回来适配。
+- 尚未在真实页面上验证：Codex 任务分享页和 Claude Code 会话页（本环境连不上）；请把错误原文反馈回来。
+
+详见 [4.16.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.16.0.md)。
 
 ## 4.15.0 — App 打开时即时更新；表格、图表、标注合一的文档编辑器
 
