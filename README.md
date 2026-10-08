@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.15.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.16.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,17 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.16.0 — Claude, ChatGPT and Codex links go into the shared space; private pages ask you to sign in
+
+Paste a Claude or ChatGPT / Codex link into **Groups & sharing → Open sharing link** and the conversation is read back and saved as a shared conversation in the current space, ready for comments, annotations and AI replies. Links that are not public pages, such as a Claude Code session (`claude.ai/code/session_…`), open a sign-in window on the desktop once; the sign-in is kept for later links.
+
+- **Shared space accepts share links.** `claude.ai/share/…`, `chatgpt.com/share/…`, `chatgpt.com/s/…` (conversation and Codex task short links) and `claude.ai/code/session_…`; the composer accepts the same set.
+- **Sign in once for private pages.** When a page redirects to a login, the desktop shows the import window so you can sign in; the import then returns to the link and reads it. The web and Android lines say plainly that such links need the desktop.
+- **A diagnosis instead of a bare timeout.** When a page loads but no message block is recognised, the error names the page and what it did find, so the structure can be reported and supported.
+- Not verified against live pages yet: Codex task share pages and Claude Code session pages (this environment cannot reach them); please report what the error says.
+
+See the [4.16.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.16.0.md).
 
 ## 4.15.0 — Instant updates while the app is open; one document editor with tables, charts and annotations
 
