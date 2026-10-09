@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.19.1-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.20.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,20 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.20.0 — 桌面版 AI 像原生一样丝滑：自动领取、指定模型与思考、自由调配次级模型；Claudex 中途接入；主页个人/群组胶囊
+
+这一版围绕一个验收标准：从 wickrunAI 调用桌面订阅端的模型，体验必须不输在原生应用里直接用。同时 Claudex 不再只能从头开始，主页一眼能分开个人聊天和群组讨论。
+
+- **任务自动领取。** Claude Desktop 连接器在线时，派发即自动下发领取指令，全程不再复制粘贴；离线仍走深链接。应用重启不会悄悄重领，一个会话同时只处理一个任务。
+- **指定模型与思考要求。** 调用 Claude Desktop 可选模型（建议清单可编辑）与扩展思考开/关；要求写进任务，领取方须在第一条进度里报告实际模型与思考状态，不一致时界面标明「要求 / 实际」并给出重试出路。官方应用没有外部设定接口，这是约定式控制，照实说。
+- **自由调配次级模型。** 把路由里的模型加入「可调配目录」并打上经济/标准/旗舰档位，派发时选「自由调配 + 预算」：桌面 AI 按准则调度——检索整理用经济档、关键推理用旗舰、子结果必须自行审查、超范围或超预算先报告征求确认；每次派发的模型、用途、用量都记录在任务详情。管家默认不参与，需单独打开开关。
+- **群聊与项目板的思考强度。** 「让模型回复」在模型旁新增五级思考强度（与单聊同一套映射），回复标注所用强度；旧记录照常显示。
+- **Claudex 全入口与中途接入。** 主聊天、项目对话、共享群聊的输入框都有 Claudex 入口：当前对话转写 + 项目规范 + 文档 + 记忆自动组装成双方完全相同的材料（截断必注明），每方独立选 client、模型、思考强度；实施模式可选逐轮换位——两家轮流实施、互相检查，单轮内写方永不自审，写权限仍逐轮由你授予。
+- **主页个人/群组胶囊。** 全部 / 个人 / 群组一键筛选：个人=没有其他参与者；群组=至少两个 wickrunAI 账号参与过的共享聊天，不用先复制到工作区就直接出现在主页，点开即聊。
+- **导入对话更干净（4.19.2 并入）。** claude.ai 塞进导入内容的「This block is not supported…」占位句与空代码围栏：能换取真实块类型的换成 `[工具调用：x]`，换不到的清掉并留一行块数说明；重新导入同一链接原位更新。
+
+详见 [4.20.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.20.0.md)。
 
 ## 4.19.0 — 导入自己的 Claude 对话和 Claude 项目；导入的记录从此能被回溯
 
