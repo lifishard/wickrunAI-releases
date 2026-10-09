@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.20.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.21.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,20 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.21.0 — 桌面链路不再被打断：长对话自动压缩+按需读取、ChatGPT Desktop 对话客户端；Claudex 一键快问
+
+围绕一个目标：从 wickrunAI 调用桌面端 Claude 和 ChatGPT 的链路必须一路通畅，不被错误打断。长对话交接不再有 24000 字符报错，ChatGPT Desktop 成为正式的对话客户端，Claudex 有了零输入成本的最基础玩法。
+
+- **长对话永不因长度打断。** 交接材料超限时自动压缩（保留你的要求和最近对话、省略处注明），完整历史存在本机，对方用新连接器工具 `wickrun_read_task_history` 按需分段读取；全程只有一条说明，没有暂停、没有确认。
+- **ChatGPT Desktop 对话客户端。** 对话里可以直接选 ChatGPT Desktop 交接任务：同一条自动领取通道、同样的模型/思考约定式要求与报告核对、同样的自由调配与预算。ChatGPT 无法预填指令，第一次需要把任务指令粘贴到接好连接器的对话里；设置里有接入指引。
+- **调用要求选得动了。** Claude/ChatGPT Desktop 的模型建议改成可点选的行（点击即选、再点取消），底栏「调用要求」不再被截断，弹层在底栏向上展开。
+- **链路防打断总修。** 中断后继续会自动重新交接；设置读不到、自由调配目录失效、图片超限等一律自动降级继续并说明；状态读取失败重试 5 次才暂停；时限只在无进展时计数，长任务不再被一刀切。
+- **Claudex 一键快问。** 聊天框里写下问题点 Claudex：两家各自作答 → 互评修订 → 产出共识（分歧照实列出），一次点击开跑，结论可一键发回对话；完整创建面板留给进阶场景。
+- **项目导入补齐历史对话。** 对话清单改为逐页抓取（翻页形态未在真实账号核对，诊断里写明读到多少），不再只有最近一页。
+- **杂项。** 字号设置作用于 Claudex 屏幕；「这段对话导入自…」横栏可关闭（来源在 ⋯ 菜单可查）。
+
+详见 [4.21.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.21.0.md)。
 
 ## 4.20.0 — 桌面版 AI 像原生一样丝滑：自动领取、指定模型与思考、自由调配次级模型；Claudex 中途接入；主页个人/群组胶囊
 
