@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.19.1-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.20.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,20 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.20.0 — Desktop AI as smooth as native: auto-claim, model & thinking requests, free delegation; Claudex mid-course; Personal/Group home filter
+
+This release is built around one acceptance bar: calling your desktop subscription models from wickrunAI must feel no worse than using the native app. Claudex also no longer has to start from scratch, and the home page separates personal chats from group discussions at a glance.
+
+- **Auto-claimed tasks.** With the Claude Desktop connector online, dispatch hands the claim instruction over automatically — no more copy-paste; offline still opens the deep link. Restarts never silently re-claim, and one session handles one task at a time.
+- **Model & thinking requests.** Pick a model (editable suggestion list) and extended-thinking on/off when calling Claude Desktop; the request goes into the task, the claiming Claude must report its actual model and thinking state in its first progress update, and mismatches are shown as "requested / reported" with a retry path. The official app has no external control API — this is control by convention, stated honestly.
+- **Free delegation of secondary models.** Add route models to a delegation catalog with economy/standard/flagship tiers, then dispatch with "free delegation + budget": the desktop AI routes retrieval and drafts to economy tiers, keeps flagships for key reasoning, must review every sub-result itself, and must report and ask before exceeding scope or budget; every delegated call records model, purpose and usage in the task detail. Butler stays out unless you flip its dedicated switch.
+- **Thinking effort in group chats and boards.** "Let a model reply" gains the five-level effort scale next to the model picker (same mapping as single chats); replies are labeled with the effort used, and old records render as before.
+- **Claudex everywhere, mid-course.** The main chat, project conversations and shared group chats all get a Claudex entry: the current transcript plus project instructions, docs and memory are assembled into identical material for both parties (truncation always noted), each party picks its own client, model and effort; implement mode can rotate the implementer each round — the two sides take turns writing and checking, a writer never reviews its own round, and write access is still granted by you round by round.
+- **Personal/Group home filter.** All / Personal / Group capsules: Personal = no other participants; Group = shared chats at least two wickrunAI accounts took part in, listed right on the home page without copying to your workspace first — one click opens the chat.
+- **Cleaner imports (4.19.2 folded in).** claude.ai's "This block is not supported…" placeholders and empty code fences in imported conversations: real block types are recovered as `[tool call: x]` notes where possible, the rest is scrubbed with a one-line count note; re-importing the same link updates in place.
+
+See the [4.20.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.20.0.md).
 
 ## 4.19.0 — Import your own Claude chats and Claude Projects; imports you can actually reach later
 
