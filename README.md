@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.20.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.21.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,20 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.21.0 — The desktop pipeline stops breaking: long chats auto-compress with on-demand history, ChatGPT Desktop as a conversation client; one-click Claudex quick ask
+
+One goal: calling desktop Claude and ChatGPT from wickrunAI must flow end to end without error interruptions. The 24000-character handoff error is gone, ChatGPT Desktop is a first-class conversation client, and Claudex gains a zero-typing basic flow.
+
+- **Long conversations never stop on length.** Oversized handoffs compress automatically (your requests and recent turns kept, omissions noted); the full history stays local and the other side reads it in parts via the new `wickrun_read_task_history` connector tool. One notice, no pause, no confirmation.
+- **ChatGPT Desktop conversation client.** Hand conversations to ChatGPT Desktop directly: the same auto-claim channel, the same model/thinking requests with report checking, the same free delegation and budgets. ChatGPT cannot prefill instructions, so the first task instruction is pasted into a connector-enabled chat; setup guidance is in Settings.
+- **The request picker is actually pickable.** Model suggestions are clickable rows (click to select, click again to clear), the bottom-bar chip no longer truncates, and the popover opens upward.
+- **Anti-interruption sweep.** Continuing after a pause re-hands off automatically; unreadable settings, a stale delegation catalog or oversized images degrade gracefully with a notice; status reads retry 5 times before pausing; the time limit only counts inactivity, so long tasks reporting progress are not cut off.
+- **Claudex quick ask.** Type a question and click Claudex: both sides answer independently → review each other → a consensus with disagreements listed as they are. One click to run, one click to send the conclusion back; the full panel remains for advanced runs.
+- **Project imports recover older conversations.** The conversation list is now fetched page by page (the real paging format is unverified on a live account; diagnostics state how much was read).
+- **Misc.** The font-size setting applies to Claudex screens; the “imported from…” banner is closable (the source stays in the ⋯ menu).
+
+See the [4.21.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.21.0.md).
 
 ## 4.20.0 — Desktop AI as smooth as native: auto-claim, model & thinking requests, free delegation; Claudex mid-course; Personal/Group home filter
 
