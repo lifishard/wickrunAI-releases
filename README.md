@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.21.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.22.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,18 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.22.0 — Project sync folder: one local truth for all three sides; Claude model & thinking directly selectable; Local AI panel redesign; cheaper releases
+
+Continuing the "unbroken desktop Claude / ChatGPT pipeline, lower switching cost" goal: a wickrunAI project can now sync to a local folder that Claude Code, Codex, Claude Desktop and ChatGPT Desktop all read; Claude's model and thinking effort are finally directly selectable; the Local AI panel shrinks from three paragraphs to one row; and GitHub Actions minutes stop burning.
+
+- **Project sync folder (two-way).** Each synced project maps to `Documents/wickrunAI Projects/<project>/`: `PROJECT.md` rules, `docs/`, `memory.md`, `journal/` (what each call did) and generated `CLAUDE.md` / `AGENTS.md`. Claude Code gets it as an extra working directory; Codex receives the path and latest journal; Claude Desktop / ChatGPT Desktop read and append through `wickrun_project_read` / `wickrun_project_journal`. New docs, memory candidates and journal entries flow back into wickrunAI; atomic writes, content-hash loop guard, nothing ever deleted.
+- **Claude model & thinking, directly selectable.** "Claude · Subscription (Claude Code engine)" becomes the primary Claude client in conversations: model (alias or exact ID) and five effort levels pick from dropdowns and take effect immediately (`--model` / `--effort`), no app switching. Claude Desktop / ChatGPT Desktop requests split into two readable selectors, "Model: Opus ▾" and "Thinking: default ▾", showing the current value; still by convention, one tooltip says so.
+- **Font size truly applies to the conversation page.** Measured root cause: 78 of 115 text elements on the page (question heading, code blocks, handoff cards, buttons) were fixed pixels — nearly everything a single-agent chat shows. 123 rules now follow the setting, with a real-render regression test.
+- **Local AI panel redesign.** One row per app: name, status dot, one primary button; secondary actions behind ⋯, explanations collapsed into "How it works"; ChatGPT settings back in the ChatGPT panel, the shared "Secondary model delegation" as its own section; readable on narrow screens.
+- **Cheaper releases.** Private-repo Actions are metered (macOS at 10×): runners switch to self-hosted via repository variables (`docs/SELF_HOSTED_RUNNER.md` has the setup), PR re-pushes cancel the previous check, docs-only changes skip CI, and macOS no longer re-runs the test suite during a release.
+
+See the [4.22.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.22.0.md).
 
 ## 4.21.0 — The desktop pipeline stops breaking: long chats auto-compress with on-demand history, ChatGPT Desktop as a conversation client; one-click Claudex quick ask
 
