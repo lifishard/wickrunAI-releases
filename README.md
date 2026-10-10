@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.22.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.23.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,19 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.23.0 — One-click local models with a private mode; imported Claude / ChatGPT conversations keep following
+
+Both features put the "connection" to real use: open models running on this machine join wickrunAI with zero configuration and private data never leaves it; conversations imported from claude.ai / ChatGPT stop being one-off snapshots — keep chatting over there and the record and rendering appear here.
+
+- **Local models, one click.** A new "Local models" card under Local AI detects Ollama (11434) and LM Studio (1234) on this machine, lists installed models, and registers them as a route (no address, no key); models land in the delegation catalog's **economy** tier; route and model pickers show a "local · data stays on this computer" badge.
+- **Private mode.** A 🔒 chip on the composer, and a per-project "new conversations private by default": only local routes are allowed; cloud routes, Claude/ChatGPT Desktop handoffs, Claude Code/Codex cloud brains and cloud Claudex parties are blocked before sending with a one-click "use a local route" way out; secondary-model delegation picks from local catalog entries only. Scheduled tasks in private projects are held to the same rule.
+- **Follow sync.** Conversations imported from your own claude.ai account, ChatGPT private chats (new `chatgpt.com/c/…` login-window import) and imported-project conversations follow by default: on open, on demand and every 5 minutes in the background, the login-window channel re-reads the remote thread and **appends only messages you don't have yet**, placed on the same timeline by remote time with a "from Claude / ChatGPT" mark; messages you write in wickrunAI are never reordered or overwritten; remote edits and deletions are flagged, never rolled back; failures back off exponentially and an expired login gets a "sign in again" path in the banner.
+- **Project follow.** wickrunAI projects imported from a Claude Project rescan the remote conversation list and offer new conversations for one-click inclusion.
+- **Handoff hint.** When a Claude / ChatGPT Desktop handoff ends, paste that conversation's link to follow it; a pasted thread that overlaps an existing local one is offered as a merge rather than a duplicate.
+- Stated boundaries: writing back to claude.ai / ChatGPT is not possible (no API on either side); the ChatGPT private-chat endpoints are unverified on a live account and fall back to the page with diagnostics; "stays on this computer" covers wickrunAI's own model requests.
+
+See the [4.23.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.23.0.md).
 
 ## 4.22.0 — Project sync folder: one local truth for all three sides; Claude model & thinking directly selectable; Local AI panel redesign; cheaper releases
 
