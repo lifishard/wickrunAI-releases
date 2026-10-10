@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.22.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.23.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,19 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.23.0 — 本地模型一键接入与隐私模式；已导入的 Claude / ChatGPT 对话持续跟随同步
+
+两件事都是把「连接」真正用起来：本机跑的开源模型零配置进 wickrunAI，隐私数据不出本机；从 claude.ai / ChatGPT 导入的对话不再是一次性快照，那边接着聊，这边自动有记录、有渲染。
+
+- **本地模型一键接入。** 「本机 AI」新增「本地模型」卡：自动发现本机的 Ollama（11434）和 LM Studio（1234），列出已装模型，一键登记为路由（不填地址不填 key），模型自动进入可调配目录的**经济档**；路由与模型选择器里带「本机 · 数据不出本机」标识。
+- **隐私模式。** 对话底栏 🔒 隐私 chip 一键开启，项目可设「新对话默认隐私」：开启后只允许本机路由，云端路由、Claude/ChatGPT Desktop 交接、Claude Code/Codex 云端大脑、Claudex 云端参与方一律在发送前拦截并给「改用本机路由」出路；次级模型调配只从本机条目里选。定时任务在隐私项目里同样受限。
+- **跟随同步。** 从自己账号的 claude.ai 对话、ChatGPT 私人对话（新增 `chatgpt.com/c/…` 登录窗口导入）和导入项目里的对话，默认跟随：打开时、手动、后台每 5 分钟，用登录窗口通道重新读取，**只追加本地没有的新消息**，按远端时间插入同一条时间线，带「来自 Claude / ChatGPT」标记；你在 wickrunAI 里接着聊的消息永不被重排或覆盖；远端改过、删过只标注不回滚；失败指数退避，登录失效在横幅里给「重新登录」出路。
+- **项目跟随。** 从 Claude 项目导入的 wickrunAI 项目会重扫远端对话清单，发现新对话提示一键纳入。
+- **交接提示。** Claude / ChatGPT Desktop 交接结束时提示：把那条对话的链接粘进来即可跟随；粘贴内容与某条本地对话重合时提示合并而不是新建。
+- 边界照实说：反向写回 claude.ai / ChatGPT 两家都没有接口，不做；ChatGPT 私人对话的内部接口未在真实账号核对，读不到退到页面并给诊断；本机路由的「不出本机」只保证 wickrunAI 发出的模型请求。
+
+详见 [4.23.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.23.0.md)。
 
 ## 4.22.0 — 项目同步文件夹：本机三方同一份真相；Claude 模型/思考直接可选；本机 AI 面板重做；发布流程省额度
 
