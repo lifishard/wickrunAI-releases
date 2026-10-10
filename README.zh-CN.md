@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.21.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.22.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,18 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.22.0 — 项目同步文件夹：本机三方同一份真相；Claude 模型/思考直接可选；本机 AI 面板重做；发布流程省额度
+
+承接「打通桌面端 Claude / ChatGPT 链路、降低切换成本」：wickrunAI 项目现在能同步成本机文件夹，Claude Code、Codex、Claude Desktop、ChatGPT Desktop 都读同一份项目真相；Claude 的模型与思考强度终于能直接选；本机 AI 面板从三段说明文字变成一行；GitHub Actions 额度不再白烧。
+
+- **项目同步文件夹（双向）。** 开启后每个项目对应 `Documents/wickrunAI Projects/<项目>/`：`PROJECT.md` 规范、`docs/` 文档、`memory.md` 记忆、`journal/` 每次调用发生了什么、自动生成的 `CLAUDE.md` 与 `AGENTS.md`。Claude Code 把它作为附加工作目录自动读；Codex 收到路径与最新日志；Claude Desktop / ChatGPT Desktop 经连接器 `wickrun_project_read` / `wickrun_project_journal` 读写。文件夹里的新增文档、记忆候选和日志回灌 wickrunAI；原子写、内容哈希防循环、永不删除。
+- **Claude 的模型与思考强度直接可选。** 「Claude · 订阅（Claude Code 内核）」成为对话里的首选 Claude 客户端：模型（别名或具体 ID）与五级思考强度直接下拉、立即生效（`--model` / `--effort`），零切换。Claude Desktop / ChatGPT Desktop 的「调用要求」拆成「模型：Opus ▾」「思考：默认 ▾」两个一眼可懂的选择器，当前值直接显示；本质仍是约定式，tooltip 一句说明。
+- **字号真正作用于对话页。** 实测找到根因：对话页里问题标题、代码块、交接卡、按钮等 78/115 个文字元素一直是固定像素——单 agent 对话几乎全是这些。123 条规则改为跟随字号，并加了真实渲染的回归测试。
+- **本机 AI 面板重做。** 每家一行：名称 + 状态点 + 一个主按钮，次要动作收进 ⋯，说明折叠成「了解原理」；ChatGPT 的设置回到 ChatGPT 面板，两家共用的「次级模型调配」独立成区块；窄屏一屏看懂。
+- **发布流程省额度。** 私有仓 Actions 按分钟计费（macOS 10 倍）：runner 可用仓库变量切到自托管（`docs/SELF_HOSTED_RUNNER.md` 有安装步骤）；PR 同分支再推自动取消旧检查；纯文档改动不跑；发布时 macOS 不再重复跑测试。
+
+详见 [4.22.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.22.0.md)。
 
 ## 4.21.0 — 桌面链路不再被打断：长对话自动压缩+按需读取、ChatGPT Desktop 对话客户端；Claudex 一键快问
 
