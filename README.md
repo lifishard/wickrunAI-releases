@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.24.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.25.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,19 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.25.0 — Fewer jumps, fewer buttons, honest labels: in-place Claudex quick ask, an icon-first composer, one-click sharing and a drive-style Groups & Sharing
+
+Common actions now stay where you are: Claudex no longer navigates away, Share copies the link immediately, and the composer and header no longer squeeze into a row of text. It also fixes a dishonest label — local forwarders no longer count as "data stays on this computer".
+
+- **In-place Claudex quick ask.** Clicking Claudex in any composer switches it to quick mode (party A / B, include the last 3 turns, Advanced…); sending adds your question and a Claudex answer card to the conversation with live steps (both answer → cross-review → consensus), and the consensus is saved as the answer; if one party fails only that party is retried. Only "Advanced…" and "view the full run" open the Claudex page.
+- **Icon-first composer and header.** Only model, Chat/Work and Send stay as text; everything else is an icon with a tooltip that opens its full description, with a dot when changed from default; the bar folds by available space, so 100% / 115% font scale no longer squeezes. Theme, font size and 简/繁/EN move into one "Aa" button and the duplicate model chip is gone. Work turns on web search and page reading by default (each can be turned off; sensitive tools stay off).
+- **One-click sharing.** Share copies the link without leaving the page, and a card says who can open it; default access is unchanged (only you, end-to-end encrypted); ⚙ Sharing settings covers audience, roles, link access, invites and stop sharing.
+- **Drive-style Groups & Sharing.** My space / Shared with me / Groups / Recent / Handoffs; projects are folders and conversations are files, with list / grid, sorting, multi-select, context menus and a details pane; a storage view lists what uses your quota by size and marks shared-with-me items as not counting. Every existing function is kept.
+- **Local means local inference.** Only registered or detected Ollama / LM Studio, or routes you declare, show "local · data stays on this computer"; loopback forwarders show "may forward to the cloud" and are blocked in private mode; Ollama `:cloud` models count as cloud.
+- Stated boundaries: quick ask has not run against real Codex / Claude Code; drive uploads, real encrypted-account sharing and real Ollama / LM Studio / OmniRoute processes are untested; none of it has been clicked through in a real Electron window.
+
+See the [4.25.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.25.0.md).
 
 ## 4.24.0 — Imported conversations really follow the remote side; select-to-collapse as implicit context management; a reading scrub bar
 
