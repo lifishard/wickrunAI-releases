@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.26.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.27.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,19 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.27.0 — 分享卡片修复、存储可彻底删除、全局搜索、加密内容也能「任何拿到链接的人」、后台占用大降且托盘退出真的退出
+
+装机反馈的五项修完。最重要的两处：链接带密钥让端到端加密的内容也能像 Google Docs 一样开放给拿到链接的人（服务器仍读不到内容）；闲置写盘从 14 MB/s 降到托盘里 0，退出不再需要「结束任务」。
+
+- **分享卡片。** 桌面版样式顺序导致卡片被压成 10 px 高的细线；现在是真正的弹出卡片，任何宽度与字号下都完整可见。
+- **存储。** 每条内容可「彻底删除」，顶部「清理已删除内容（释放 N）」；服务器只留 id 与删除时间，额度立即下降。
+- **全局搜索。** 不管左栏选哪里，都搜整个网盘，结果带「归属」「位置」两列，点击原位打开。
+- **链接带密钥。** `#item=…&k=…` 的密钥只在浏览器里，服务器看不到；拿到链接可查看、登录可评论、不能编辑；重新生成或停止共享立即失效。默认仍是受限链接。
+- **后台与退出。** 设置 → 高级：关到托盘后默认暂停后台工作（进行中的任务和你建的定时任务照跑），闲置 5 分钟释放窗口内存；「退出」结束应用启动的所有进程树，10 秒看门狗兜底；新「后台活动」页逐项显示定时器、写盘与进程。根因是每次改键都整库重写 + 管家心跳触发云端全量同步。
+- 边界照实说：Windows 上的 taskkill 与任务管理器数字、真实云端网络节省未实测；旧版客户端不认识带密钥的链接。
+
+详见 [4.27.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.27.0.md)。
 
 ## 4.26.0 — 对话运行控制：立即送出会续跑、暂停一秒停下、看得见 Codex 在想还是停了、输出文件与链接可点
 
