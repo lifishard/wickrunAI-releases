@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.25.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.26.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,19 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.26.0 — Run control: send-now resumes, pause stops within a second, Codex state is visible, output files and links are clickable
+
+Four fixes exposed by driving Codex / OpenRouter / SenseNova from wickrunAI — all about whether you are in control of the run.
+
+- **Send now and the queue.** A question sent mid-run no longer lands inside the current answer: that answer is cut in place and marked "interrupted, progress saved", your question becomes its own turn, and the run resumes automatically in a new answer; if it cannot, it says so and offers Continue. A queue strip under the composer lets you send-now or delete each queued item.
+- **Pause really stops.** Paused shows within a second, the HTTP stream is cancelled immediately and never retried; background wrap-up is listed with elapsed time and can be force-stopped after 5 s; Codex is force-ended if it does not confirm a stop within 3 s.
+- **Visible state.** Thinking / generating / running a tool / waiting for confirmation / stopped, with time since last activity; 60 s of silence flags a possible hang.
+- **Output files and links.** Files written by clients or tools appear in an Output files card and count as code changes (large folders included); links and local paths in answers are clickable, with Copy for paths outside the working folder.
+- CI: flaky test files are rerun on their own and a pass becomes a warning.
+- Stated boundaries: nothing was run against real Codex / OpenRouter / SenseNova; Electron file-opening wiring was not clicked in a real window.
+
+See the [4.26.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.26.0.md).
 
 ## 4.25.0 — Fewer jumps, fewer buttons, honest labels: in-place Claudex quick ask, an icon-first composer, one-click sharing and a drive-style Groups & Sharing
 
