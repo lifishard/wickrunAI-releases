@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.23.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.24.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,18 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.24.0 — 导入对话真正跟上远端；选中内容「折叠」做隐式上下文管理；左侧阅读定位条
+
+修两条反馈，加两项对话级能力：4.23 之前导入的 Claude / ChatGPT 对话从未同步过，项目导入只拿到最近几条——这版都修了，并让你看得见同步在不在干活；折叠与定位条把长对话变得可管理、可回溯。
+
+- **老导入自动开跟随。** 启动与打开对话时自动给 4.23 之前导入的自有账号对话补跟随标记（手动关掉的不动）；老项目在成员对话报出所属 Claude 项目时补项目级跟随并重扫。横幅显示「远端 N 条 / 本地 M 条 · 同步于 · 下次自动同步 · 上次错误」，新增「同步诊断」对话框：最近 5 次同步记录、后台调度器状态、各平台登录状态。
+- **项目导入回溯全部对话。** 三个来源一起读（项目接口、按项目筛选、整个账号的清单分页读完后按 project_uuid 过滤）按 uuid 合并，上限 1000；向导列出全部对话默认全选、可勾选、显示「远端共 N 条」；逐条导入可中止、给结果清单；再粘同一链接合并进原项目，已导入的不重复。
+- **折叠。** 选中对话内容 →「折叠」：原位一行核心意思（当前路由生成，隐私模式不出本机），折叠部分之后只以「[已折叠：摘要]」进入模型上下文（普通发送、桌面交接、Claudex 材料、管家读取），原文保留、随时展开或取消；首次使用弹窗说明效果，输入框上方显示「N 处已折叠 · 约省 X tokens」。
+- **阅读定位条。** 对话左边缘悬停出现纵向轨道：每个提问、长回答里的标题 / 版本行 / 长代码块 / 折叠段各一刻度；悬停预览，按住上下拖动逐阶段浏览并同步滚动，点击跳转，键盘可用；设置里可关。
+- 边界照实说：账号级对话清单接口的字段与分页、后台调度器在真实 Electron 的运行，均未在真实账号 / 真机核对，诊断与「同步诊断」对话框会写明实际情况。
+
+详见 [4.24.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.24.0.md)。
 
 ## 4.23.0 — 本地模型一键接入与隐私模式；已导入的 Claude / ChatGPT 对话持续跟随同步
 
