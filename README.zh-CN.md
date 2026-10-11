@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.25.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.26.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,19 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.26.0 — 对话运行控制：立即送出会续跑、暂停一秒停下、看得见 Codex 在想还是停了、输出文件与链接可点
+
+修复在 wickrunAI 里调用 Codex / OpenRouter / SenseNova 时暴露的四个问题，都是「控制权在不在你手上」的问题。
+
+- **立即送出与排队。** 中途送出的新问题不再混进当前回答：当前回答原处截断并标「已中断，现场已保存」，新问题独立成轮，运行自动在新回答里继续；续不上就明说并给「继续」。输入框下方可见排队条，逐条可立即送出或删除。
+- **暂停真正停下。** 一秒内显示已暂停，HTTP 流立即取消、不再重试；后台收尾列出来并计时，5 秒后可强制停止；Codex 3 秒不确认就强制结束进程。
+- **状态可见。** 思考中 / 生成中 / 执行工具中 / 等待确认 / 已停止，带距上次活动时间；60 秒无输出提示可能卡住。
+- **输出文件与链接。** 客户端或工具写出的文件出现在「输出文件」卡并计入代码改动（大目录也认）；回答里的链接和本地路径可点击，目录外路径给复制。
+- CI：偶发失败的测试文件自动单独重跑，通过记为警告。
+- 边界照实说：均未对真实 Codex / OpenRouter / SenseNova 跑过，Electron 打开文件的接线未在真实窗口点过。
+
+详见 [4.26.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.26.0.md)。
 
 ## 4.25.0 — 少跳转、少按钮、说真话：Claudex 原地快问，图标优先的输入框，一键分享与网盘式「群组与共享」
 
