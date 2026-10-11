@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.24.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.25.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,19 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.25.0 — 少跳转、少按钮、说真话：Claudex 原地快问，图标优先的输入框，一键分享与网盘式「群组与共享」
+
+这一版把常用操作留在原地：点 Claudex 不再跳页，点分享直接复制链接，输入框和顶栏不再挤成一排文字；同时修正一处不诚实的标识——本机转发器不再算「数据不出本机」。
+
+- **Claudex 原地快问。** 任何输入框点 Claudex 即切换为快问模式（甲 / 乙、带上最近 3 轮、高级…），发送后问题与 Claudex 回答卡直接出现在对话里，实时显示两家作答 → 互评 → 共识，完成后共识保存为回答；一方失败只重跑那一方。只有「高级…」和「查看完整过程」会打开 Claudex 页面。
+- **图标优先的输入框与顶栏。** 底栏只留模型、Chat/Work、发送三样文字，其余变成带提示的图标、点开才是说明，改过默认值有圆点；按剩余空间折叠，100% / 115% 字号不再挤压。顶栏的主题 / 字号 / 简繁 EN 收进「Aa」，去掉重复的模型名。Work 默认开联网搜索与网页读取（可逐个关，敏感工具仍默认关）。
+- **一键分享。** 点分享就复制链接、不离开页面，卡片写明谁能打开；默认权限与以前相同（只有你、端到端加密）；⚙ 共享设置里改对象、角色、链接访问、邀请、停止共享。
+- **网盘式「群组与共享」。** 我的空间 / 与我共享 / 群组 / 最近 / 工作交接；项目是文件夹、对话是文件，列表 / 网格、排序、多选、右键菜单、详情栏；存储视图按大小列出占你空间的内容，别人分享的标明不占空间。原有功能全部保留。
+- **本机 = 本机推理。** 只有登记或检测确认的 Ollama / LM Studio、或你声明过的路由才显示「本机 · 数据不出本机」；本机地址的转发器显示「可能转发到云端」并被隐私模式拦截；Ollama 的 `:cloud` 模型按云端处理。
+- 边界照实说：快问未对真实 Codex / Claude Code 跑过，网盘页的上传与真实加密账号分享、真实 Ollama / LM Studio / OmniRoute 进程均未实测；都未在真实 Electron 窗口里点过。
+
+详见 [4.25.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.25.0.md)。
 
 ## 4.24.0 — 导入对话真正跟上远端；选中内容「折叠」做隐式上下文管理；左侧阅读定位条
 
