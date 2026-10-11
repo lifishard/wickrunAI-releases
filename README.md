@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.26.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.27.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,19 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.27.0 — Share card fixed, permanent delete in storage, global search, "anyone with the link" for encrypted content, far lower background usage and a quit that really quits
+
+Five post-install reports fixed. The two that matter most: a key-in-link scheme lets end-to-end encrypted content be opened by anyone with the link, Google-Docs style, while the server still cannot read it; idle disk writes drop from 14 MB/s to zero in the tray, and Quit no longer needs End task.
+
+- **Share card.** Desktop stylesheet order squashed the card into a 10 px line; it is now a real popover, fully visible at any width and font scale.
+- **Storage.** Every item has Delete permanently and the view has "Clean up deleted content (free N)"; the server keeps only the id and deletion time, and the quota drops at once.
+- **Global search.** Whatever section is selected, search covers the whole drive, with Ownership and Location columns; clicking opens the item where it lives.
+- **Key in link.** `#item=…&k=…` keeps the key in the browser, never on the server; link holders can view, signed-in holders can comment, nobody can edit; regenerating or stopping the link invalidates it immediately. The default stays restricted.
+- **Background and quit.** Settings → Advanced: closing to the tray pauses background work by default (running tasks and your scheduled tasks continue), the window's memory is released after 5 idle minutes; Quit ends every process tree the app started with a 10 s watchdog; a new Background activity page lists every timer, disk write and process. Root cause: every key change rewrote the whole store and the Butler heartbeat triggered full cloud syncs.
+- Stated boundaries: Windows taskkill and Task Manager figures, and real cloud network savings, are unmeasured; older clients do not recognise key links.
+
+See the [4.27.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.27.0.md).
 
 ## 4.26.0 — Run control: send-now resumes, pause stops within a second, Codex state is visible, output files and links are clickable
 
