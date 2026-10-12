@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.28.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.29.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,16 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.29.0 — 分享更可控：指定的人直接收到、需登录链接看得到是谁、公开链接风险提示与不被收录；新用户入门导览与反馈渠道
+
+- **指定的人直接收到。** 按邮箱或群组共享后内容直接出现在对方「与我共享」，配置了邮件服务时发通知邮件（只有标题和链接）。
+- **看得到是谁打开。** 需登录的链接按账号列出打开记录，可单独移除访问；公开链接仍匿名。
+- **公开链接更安全。** 三条风险提示；分享页与接口要求搜索引擎不收录、不存档。
+- **入门与反馈。** 首次打开选语言与主题、约 1 分钟导览，设置 → 帮助可重看；「反馈使用体验」可附截图与可选诊断，发送前完整预览。
+- 照实说：分享对话的多人实时参与本版未包含，计划见 docs/plans/team-collaboration.md；邮件需在服务器配置 Resend 或 SMTP。
+
+详见 [4.29.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.29.0.md)。
 
 ## 4.27.0 — 分享卡片修复、存储可彻底删除、全局搜索、加密内容也能「任何拿到链接的人」、后台占用大降且托盘退出真的退出
 
