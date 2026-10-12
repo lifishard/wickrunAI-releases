@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.28.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.29.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,16 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.29.0 — Sharing you control: named people receive items directly, see who opened sign-in links, risk notes and no indexing for public links; first-run tour and feedback
+
+- **Named people receive it.** Sharing by email or group puts the item in their Shared with me; with a mail provider configured they get an email (title and link only).
+- **See who opened.** Sign-in links list openers by account, each removable; public links stay anonymous.
+- **Safer public links.** Three risk notes; share pages and APIs ask search engines not to index or archive.
+- **Onboarding and feedback.** Pick language and theme on first open, a one-minute tour replayable from Settings → Help, and a feedback dialog with optional screenshot and diagnostics previewed before sending.
+- Stated boundaries: live multi-person shared conversations are not in this release (plan in docs/plans/team-collaboration.md); email needs Resend or SMTP configured on the server.
+
+See the [4.29.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.29.0.md).
 
 ## 4.27.0 — Share card fixed, permanent delete in storage, global search, "anyone with the link" for encrypted content, far lower background usage and a quit that really quits
 
