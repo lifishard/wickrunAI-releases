@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.29.3-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.30.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,17 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.30.0 — Shared conversations: chat with people or ask your own AI
+
+Continue a shared conversation from Home or Drive with the same transcript. Sending text to people is independent of asking AI for a reply.
+
+- **Clear roles.** Viewers read, commenters annotate and chat, editors can also ask AI using their own route and allowance.
+- **One conversation.** Home and Drive open the same shared record; linked local histories follow it while private divergent history stays local.
+- **Offline text survives.** Messages wait in an account-scoped outbox and retry with a stable ID. Revoked access stops retries and keeps your words.
+- **Encrypted collaboration.** Existing encryption and membership key rotation remain in force, including signed-in link holders sending human text.
+
+See the [4.30.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.30.0.md). This is a prepared candidate; publication is pending.
 
 ## 4.29.0 — Sharing you control: named people receive items directly, see who opened sign-in links, risk notes and no indexing for public links; first-run tour and feedback
 
