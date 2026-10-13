@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.29.3-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.30.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,17 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.30.0 — 共享对话：和人聊天，或让自己的 AI 回复
+
+首页与网盘接续同一份共享记录，发文字给参与者看和请求 AI 回复是独立的发送方式。
+
+- **角色明确。** 查看者只读；评论者可标注和聊天；编辑者还可用自己的路由与额度让 AI 回复。
+- **同一份对话。** 首页与网盘打开同一个共享条目，关联的本地历史跟随更新，私人旧分叉保留在本机。
+- **断网不丢文字。** 按账号保存待送消息，以固定 ID 重送；访问撤销后停止重试并保留文字。
+- **延续加密。** 现有加密与成员换钥机制继续生效，已登入的链接持有人也可发送人类文字。
+
+参见 [4.30.0 版本说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.30.0.md)。当前为已准备的候选，尚未发布。
 
 ## 4.29.0 — 分享更可控：指定的人直接收到、需登录链接看得到是谁、公开链接风险提示与不被收录；新用户入门导览与反馈渠道
 
