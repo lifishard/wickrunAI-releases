@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.30.2-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.31.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,16 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.31.0 · 团队日历
+
+在群组中安排日程，并把时间与正在进行的工作关联起来。
+
+- **日、周、月视图**：创建日程，保留时区，关联对话、项目和任务。
+- **导入与同步**：ICS 文件和私密订阅；配置 OAuth 后选择 Google／Outlook 日历，双向同步并明确处理冲突。
+- **提醒与追踪**：自选桌面通知和邮件提醒，管理员可撤销外部订阅链接。
+
+配置条件和发布平台见 [4.31.0 发布说明](https://github.com/lifishard/wickrunAI-releases/releases/tag/v4.31.0)。
 
 ## 4.30.0 — 共享对话：和人聊天，或让自己的 AI 回复
 
