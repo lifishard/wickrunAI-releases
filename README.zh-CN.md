@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.31.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.32.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,16 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.32.0 · 团队目标与双行确认
+
+把团队目标关联到现有任务，让进度和里程碑达成分别呈现。
+
+- **目标与计划**：建立里程碑或关键结果，关联看板任务，汇总进度，截止日期可加入团队日历。
+- **AI 与人类两行确认**：AI 用自己的模型连接检查，人类可一键确认并补充说明；两行都确认才显示达成，资料变更后旧确认失效。
+- **周报先审后发**：AI 生成私人草稿，由生成者阅读、编辑并确认发布后群组成员才可见。
+
+这是群组协作入口的扩展。详情见 [4.32.0 发布说明](https://github.com/lifishard/wickrunAI-releases/releases/tag/v4.32.0)。
 
 ## 4.31.0 · 团队日历
 
