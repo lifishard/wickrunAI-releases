@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.30.2-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.31.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,16 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.31.0 ? Team calendar
+
+Plan schedules inside a shared group and connect them to ongoing work.
+
+- **Calendar views:** create events in day, week and month views, with time zones and links to conversations, projects and tasks.
+- **Import and sync:** ICS files and private feeds; Google Calendar and Outlook two-way sync after OAuth setup, with explicit calendar selection and conflict resolution.
+- **Reminders:** opt-in notifications and email; administrators can revoke external subscription links.
+
+See the [4.31.0 release notes](https://github.com/lifishard/wickrunAI-releases/releases/tag/v4.31.0) for setup requirements and supported platforms.
 
 ## 4.30.0 — Shared conversations: chat with people or ask your own AI
 
