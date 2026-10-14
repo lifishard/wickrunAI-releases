@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.31.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.32.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -35,7 +35,17 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 
 ---
 
-## 4.31.0 ? Team calendar
+## 4.32.0 · Team goals and milestone confirmations
+
+Connect team objectives to existing tasks, with progress and milestone achievement shown separately.
+
+- **Goals and plans:** create milestones or key results, link board tasks, summarize progress and add deadlines to the team calendar.
+- **Two confirmation rows:** AI checks with the requester's model connection; a person confirms separately with an optional note. Both must confirm achievement, and changed evidence invalidates old confirmations.
+- **Review before publishing:** AI drafts a private weekly review; its author reads, edits and confirms publication before the group sees it.
+
+This extends the group collaboration space. See the [4.32.0 release notes](https://github.com/lifishard/wickrunAI-releases/releases/tag/v4.32.0).
+
+## 4.31.0 · Team calendar
 
 Plan schedules inside a shared group and connect them to ongoing work.
 
