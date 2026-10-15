@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.32.1-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.33.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,15 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.33.0 · Butler execution and lighter operation
+
+- **Complete tasks**: remove fixed task character ceilings; accepted suggestions use concise, sourced handoffs and normal Work approvals.
+- **Less repeated work**: debounce before history projection, reuse unchanged serialization, and avoid copying large directories for everyday Butler tasks.
+- **Compact workspace**: show two output files initially, sort recent chats across projects by opening and activity, and use plain day numbers in the month grid.
+- **Everyday needs**: ground food, travel, household and scheduling suggestions in actual evidence and ask for missing essential facts.
+
+See the [4.33.0 release notes](https://github.com/lifishard/wickrunAI-releases/releases/tag/v4.33.0).
 
 ## 4.32.0 · Team goals and milestone confirmations
 
