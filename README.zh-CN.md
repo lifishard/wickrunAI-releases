@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.32.1-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.33.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,15 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.33.0 · 管家执行与运行瘦身
+
+- **任务完整传递**：移除固定任务字符拦截，「做吧」采用简短、有来源的交接，并按正常 Work 权限执行。
+- **减少重复处理**：流式对话的保存先防抖，未变历史复用序列化结果；日常管家工作不先复制大目录。
+- **更紧凑的工作区**：输出文件默认两个；最近对话跨项目按打开与运行排序；中文月历日期只显示数字。
+- **日常生活需求**：分析和简报关注衣食住行与具体琐事，引用实际资料，缺关键数据时询问。
+
+详见 [4.33.0 发布说明](https://github.com/lifishard/wickrunAI-releases/releases/tag/v4.33.0)。
 
 ## 4.32.0 · 团队目标与双行确认
 
