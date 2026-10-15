@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.33.2-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.34.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,18 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.34.0 · Conversations, files and tasks together
+
+- Show submitted text, pictures and files before model preparation; recover drafts on failure.
+- Use the Home reader and composer for shared chats, with human/AI send modes and your own model connection.
+- Keep unsent skills, attachments and quotes inside each conversation.
+- Attach files on tablets and import workspace folder copies into project documents.
+- Host encrypted artifacts with their static assets and open interactive previews across authorized clients.
+- Preserve shared file context and browse files, pictures and links in the conversation resources sidebar.
+- Create, pause, resume and review independent tasks while retaining Work isolation and conflict protection.
+
+See the [4.34.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.34.0.md) for supported artifact formats, folder import behavior and access requirements.
 
 ## 4.33.0 · Butler execution and lighter operation
 
