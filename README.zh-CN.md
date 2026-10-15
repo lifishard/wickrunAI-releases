@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.33.2-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.34.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,18 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.34.0 · 对话、文件与任务在同一处
+
+- 发送后先显示文字、图片和文件，再准备模型；失败恢复草稿。
+- 共享对话使用首页阅读区和输入框，选择纯聊天或用自己的模型回复。
+- skills、待送附件和引用按对话独立暂存。
+- 平板可以选档，并把工作资料夹副本导入项目文档。
+- 加密托管成果及其静态依赖，在有权限的其他客户端运行互动预览。
+- 共享记录保留附件和成果，右侧资料栏集中查看文件、图片和链接。
+- 直接新建、暂停、继续和核对独立任务，保留 Work 文件隔离与冲突保护。
+
+支持格式、资料夹导入方式及访问条件见 [4.34.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.34.0.md)。
 
 ## 4.33.0 · 管家执行与运行瘦身
 
