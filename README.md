@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.36.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.37.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,14 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.37.0 · Parallel work is just something the AI does
+
+- Ask for another task in plain words, or type `/work` or `/chat`, and the AI opens it in an isolated copy. The separate "parallel tasks" panel is gone; what people need (running tasks, merges waiting for approval, conflicts) lives in the Activity panel.
+- Inside a Git repository the isolation is a `git worktree` on its own branch; merging back uses Git, a merged session keeps working, and a conflict goes back to that session's AI before it ever reaches you. Outside Git, the file copy stays, now with a real three-way merge.
+- A coordination message can wake an idle task instead of waiting for its next model call.
+
+See the [4.37.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.37.0.md) for how merges, conflicts and uncommitted changes are handled.
 
 ## 4.36.0 · A store that stays small
 
