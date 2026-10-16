@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.37.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.38.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,15 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.38.0 · Phone and tablet: run on their own, or remote-control the computer
+
+- One visible state on mobile: "Standalone" or "Remote: <your computer> · online". Standalone chats, attaches files, uses cloud models, project docs and web search on the device itself; tools that need files or a terminal are simply not offered to the model. Remote runs every tool on the computer, and the working-directory picker lists the computer's folders.
+- Pairing is one confirmation: turn on "Allow phones and tablets to control this computer", the tablet finds it under the same account (or you type the address once), and you type the tablet's code on the computer. The computer shows who is connected in the tray, with a one-click disconnect.
+- Transport is HTTPS with a pinned certificate over the local network or Tailscale; no more plaintext and no more hand-copied tokens. The old setup could not connect from Android at all.
+- If the computer goes offline mid-task, the task waits instead of feeding errors to the model, and resumes when it is back.
+
+See the [4.38.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.38.0.md) for the security changes and what still needs a physical device.
 
 ## 4.37.0 · Parallel work is just something the AI does
 
