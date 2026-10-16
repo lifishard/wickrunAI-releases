@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.34.1-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.35.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,15 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.35.0 · 群聊都在首页；记录的代码差异不再压垮渲染进程
+
+- 群聊不论从哪里进入（侧栏、共享网盘、分享链接、新建群聊、导入的分享）都在首页阅读区和输入框里打开；协作空间只给未登录访客保留只读记录。
+- 首页标出每条消息的成员名字、自己的发言和 AI 回复的模型，别人的消息不能被改问或重试；共同对话里不开 Work，横幅直接打开共享设置。
+- 修复渲染进程被系统杀掉的闪退：收起的「代码改动」把每一行记录的差异都挂在页面上（一段对话 56,813 行、30 万以上节点）。差异行现在只在展开时渲染，每次 400 行。
+- 回答到达时附件不再闪一下；边打字边同步的草稿不会被自己的回声覆盖；共享附件缺失不再让对话卡在「准备中」；共享对话正文里的成果链接重新可以打开。
+
+闪退分析与协作空间的变化见 [4.35.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.35.0.md)。
 
 ## 4.34.0 · 对话、文件与任务在同一处
 
