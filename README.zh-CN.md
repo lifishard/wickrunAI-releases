@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.38.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.39.1-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,15 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.39.0 · 任务收得了尾；小模型装得下；撞限额换路而不是干等
+
+- 任务结束只看协议信号；八道串行门禁合并成一次只看客观证据的交付检查，失败最多修 2 轮，剩下的以「完成 · N 项未核实」收尾（让 AI 修 / 我来验收 / 忽略），不再以暂停收场。Codex、Claude Code、Grok 的完成状态直接采信；「证据必须是 callId」从工具说明、提示词和代码里一并清除。
+- 每一次等待都有名字和期限：60 秒「安静中 · 正在等 X」，3 分钟主动探测，10 分钟重发或问进度，15 分钟自动停下保存现场；Claude Code 改为 15 分钟无输出才停。可选「严格验收」由只读验收子代理复核。
+- 窗口未知时按档位假设（本机 / 免费 / 小模型 8K，其余 32K，标「按假设」，成功后向上学习）；输出预留随窗口缩放，已知 8K 的模型不再一进 Work 就暂停；压缩不再因为围栏、解释文字或缺少来源 id 而拒收，放不下就退回抽取式摘要。
+- 429 按「账户 × 模型」学节奏（AIMD + 令牌桶），等待按算出的时间而不是固定 62 秒；同一路由连撞 2 次就在运行中换下一条路由，套餐 / 账单 / 模型不存在第一次就换并标记 6 小时；各家 `reasoning_effort` 的允许值从 400 里学会并立即重试。排队状态统一为「按限额排队 · 第 N 次 · 预计 X 秒」+「立即换路由」。
+
+依据的运行数据、取舍与边界，见 [4.39.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.39.0.md)。
 
 ## 4.38.0 · 手机与平板：独立运行，或遥控电脑
 
