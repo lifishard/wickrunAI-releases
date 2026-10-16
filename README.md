@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.35.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.36.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,15 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.36.0 · A store that stays small
+
+- Large cloud-sync snapshots, archives and attachment caches now live in their own files instead of one 300 MB `store.json`; writing any of them no longer rewrites everything. A one-time migration on first start keeps a byte-for-byte copy of the old file, and Settings offers a restore.
+- Run states are saved slim once the run journal holds them, and recorded diff lines are rebuilt from the version store instead of being stored in every conversation. One conversation measured at 51 MB drops to a few MB.
+- The main process keeps a small conversation index instead of parsing every conversation on every tool call; sending no longer saves all conversations first.
+- Backups cover the new folders, and quitting waits in proportion to the last save instead of a fixed 3 seconds.
+
+See the [4.36.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.36.0.md) for what changed on disk, what the migration keeps, and what still needs a later release.
 
 ## 4.35.0 · Group chats live on Home; no more renderer crashes from recorded diffs
 
