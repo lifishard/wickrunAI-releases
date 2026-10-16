@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.35.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.36.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,15 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.36.0 · 不再膨胀的本地存储
+
+- 云同步快照、归档和附件缓存从 300 MB 的单文件 `store.json` 搬到各自的文件里，改任何一项都不再整份重写。第一次启动时一次性迁移，原文件按字节保留一份副本，设置里可恢复。
+- 运行状态只要进了执行日志就按瘦身版保存；记录的逐行差异改由版本库重算，不再写进每段对话。实测 51 MB 的一段对话降到几 MB。
+- 主进程改用一份小索引，不再在每次工具调用时解析全部对话；发送前也不再全量保存。
+- 备份覆盖新目录；退出时按上次保存耗时等待，而不是固定 3 秒。
+
+磁盘上改了什么、迁移保留了什么、还有哪些留到后续版本，见 [4.36.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.36.0.md)。
 
 ## 4.35.0 · 群聊都在首页；记录的代码差异不再压垮渲染进程
 
