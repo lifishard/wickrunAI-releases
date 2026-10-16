@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.36.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.37.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,14 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.37.0 · 并行任务就是 AI 的一项本事
+
+- 用一句话让 AI 另开一个任务，或输入 `/work`、`/chat`，它会在隔离副本里开工。独立的「并行任务」面板删掉了，人需要看的（运行中的任务、等批准的合并、冲突）都在「任务动态」里。
+- 在 Git 仓库里隔离就是一条分支加 `git worktree`；合并回去走 Git，合并过的会话继续可用，冲突先交回该会话的 AI 处理，解决不了才到你手上。不是 Git 的目录仍用文件副本，但有了真正的三方合并。
+- 协调消息可以唤醒空闲的任务，不再等它下一次请求模型。
+
+合并、冲突与未提交改动怎么处理，见 [4.37.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.37.0.md)。
 
 ## 4.36.0 · 不再膨胀的本地存储
 
