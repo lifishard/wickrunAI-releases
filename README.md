@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.34.1-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.35.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,15 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.35.0 · Group chats live on Home; no more renderer crashes from recorded diffs
+
+- Every group chat opens in the Home reader and composer, whichever way you reach it: sidebar, shared drive, share link, a new chat or an imported share. The shared space keeps a read-only transcript for guests only.
+- Home labels each message with the member's name, marks your own, shows the model for AI replies, and never lets you edit or retry another member's message. Work mode stays off inside a shared chat; Share settings open from the banner.
+- Fixed the renderer being killed by the system: closed code-change disclosures mounted every recorded diff line (one conversation held 56,813 lines, over 300,000 DOM nodes). Diff lines now render only when opened, 400 at a time.
+- Attachments no longer flash when an answer arrives; a draft you keep typing is not overwritten by its own sync echo; a missing shared attachment no longer leaves a conversation stuck in "preparing"; artifact links inside shared chats open again.
+
+See the [4.35.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.35.0.md) for the crash analysis and what changed in the shared space.
 
 ## 4.34.0 · Conversations, files and tasks together
 
