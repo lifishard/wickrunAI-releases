@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.37.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.38.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,15 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.38.0 · 手机与平板：独立运行，或遥控电脑
+
+- 移动端只有一个状态：「独立运行」或「遥控：<你的电脑> · 在线」。独立运行能聊天、附件、云端模型、项目文档和联网搜索，都在设备本机完成；需要文件或命令行的工具直接不给模型。遥控时所有工具在电脑上执行，工作目录选的是电脑上的文件夹。
+- 配对只要确认一次：电脑打开「允许手机/平板遥控这台电脑」，平板在同账号下自动发现（或手动输一次地址），在电脑上输入平板显示的校验码。电脑托盘显示谁在遥控，可一键断开。
+- 传输改为局域网 / Tailscale 上的 HTTPS 加证书指纹固定，不再明文、不再手抄令牌。旧方案在 Android 上根本连不上。
+- 任务中电脑离线时，任务等待而不是把错误喂给模型，电脑回来后自动续跑。
+
+安全改动与仍需真机验证的点，见 [4.38.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.38.0.md)。
 
 ## 4.37.0 · 并行任务就是 AI 的一项本事
 
