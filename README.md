@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.38.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.39.1-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,15 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.39.0 · Tasks finish; small models fit; rate limits switch routes instead of waiting
+
+- A task ends on the protocol signal; the eight serial gates become one delivery check on objective evidence, with at most two repair rounds, and whatever is left ends as "completed · N unverified" (Fix / Verify myself / Ignore) instead of a pause. Codex, Claude Code and Grok completions are trusted; "evidence must be a callId" is gone from tool descriptions, prompt and code alike.
+- Every wait has a name and a deadline: quiet at 60 s, a probe at 3 min, a re-issue or status question at 10 min, an automatic stop with the scene saved at 15 min; Claude Code now stops on 15 min idle. An optional strict mode runs a read-only verifier subagent.
+- Unknown context windows are assumed by tier (8K for local, free and small models, 32K otherwise, labelled as assumed and learned upward); the output reserve scales with the window so a known 8K model no longer pauses on entering Work; compaction no longer rejects fenced output, preambles or missing source ids, and falls back to an extractive summary.
+- 429s are paced per account × model (AIMD plus a token bucket) with computed waits instead of a fixed 62 s; two consecutive 429s switch to the next route mid-run; plan, billing and missing-model errors switch at once and mark the route for six hours; provider `reasoning_effort` enums are learned from 400s and retried immediately. Queued state reads "queued by quota · attempt N · about X s" with a switch-now button.
+
+See the [4.39.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.39.0.md) for the run data behind this, the trade-offs and the limits.
 
 ## 4.38.0 · Phone and tablet: run on their own, or remote-control the computer
 
