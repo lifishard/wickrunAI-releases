@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.41.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.42.1-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,15 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.42.0 · 共同对话里也能干活：各自执行，共享过程；补丁、侧栏、跨端 artifact
+
+- 共同对话不再只能聊天：编辑角色的成员可以发 Work，在自己的机器、自己绑定的目录、自己的路由上执行，审批在自己这边；工作过程（步骤摘要、改动预览、输出文件、交付结果、派发账目、运行状态）瘦身同步进对话，别人看到只读的过程卡和「X 正在执行…」，任何编辑都能带着完整共享历史在自己目录里接着干。
+- 别人的代码改动变成补丁卡片：完整 diff 存为共享文件，「应用到我的目录」走 `git apply --3way`（非 Git 目录按行三方合并），冲突时我的目录一个字节不写、交回这段对话的 AI 两轮再由人选；同一仓库时提示可以直接 `git pull`。
+- 右侧栏按链接 / 文件 / 图片 / 补丁分类，可打开、下载、跳到消息、应用。
+- 个人对话的输出文件可托管到我的空间，Android 与网页也能打开；共同对话里的 artifact 本来就是共享文件，各端同一预览。
+
+服务端合同、边界与风险见 [4.42.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.42.0.md)。
 
 ## 4.41.0 · 派发有记分；小模型的提示词与工具分档；主进程请求也受限额治理
 
