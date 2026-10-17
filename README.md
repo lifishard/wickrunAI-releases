@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.41.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.42.1-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,15 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.42.0 · Work inside shared conversations: run on your own machine, share the process; patches, sidebar, cross-client artifacts
+
+- Shared conversations are no longer chat-only: editor-role members send Work turns that run on their own machine, in a directory they bind, with their own route and approvals; a slim projection of the working process (step summaries, change previews, output files, delivery result, delegation ledger, live status) syncs into the conversation, others see a read-only card and "X is running…", and any editor continues in their own directory with the full shared history.
+- Other members' code changes arrive as patch cards: full diffs stored as shared files, applied into your bound directory with `git apply --3way` (line-based merge outside Git); on conflict nothing is written to your directory — the conversation's AI gets two rounds, then you choose; a "same repository, you can also git pull" hint appears when remotes match.
+- A right sidebar lists links, files, images and patches, with open, download, jump-to-message and apply.
+- Output files of personal conversations can be hosted to My Space so Android and the web open them; artifacts in shared conversations were already shared files with one preview everywhere.
+
+Server contract, limits and risks are in the [4.42.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.42.0.md).
 
 ## 4.41.0 · Delegation scorecard; tiered prompts and tools for small models; main-process requests under the governor
 
