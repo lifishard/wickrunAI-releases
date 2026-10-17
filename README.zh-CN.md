@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.40.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.41.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,14 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.41.0 · 派发有记分；小模型的提示词与工具分档；主进程请求也受限额治理
+
+- 派发记分卡：每个模型被派发的成功 / 失败 / 退回次数、花费与最近一次失败原因按「账户 × 模型」跨运行保存，主模型查目录时连同限额标记一起看到；被标记不可用的模型不能派，冷却中的会警告。账单面板给派发的流水标「派发 · reason / work」。
+- 小模型的固定前缀分档：窗口小时系统提示只留基本守则与折叠的技能索引，工具只发 6 个核心 + `find_tools` 按需激活；同一任务的前缀从 8.2K 降到 2.2K token，已知 8K 窗口不再一进 Work 就暂停。云端大窗口不变。
+- Codex / Claude Code 的大脑代理、桌面 AI 工作模型的请求也经 RouteGovernor 准入与记账；Android 把响应头交给节拍器；团队与管家任务也能运行中换路由；健康度记在真正服务的路由上。
+
+细节与边界见 [4.41.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.41.0.md)。
 
 ## 4.40.0 · 模型调度：主模型指挥，次级模型干活，主模型验收
 
