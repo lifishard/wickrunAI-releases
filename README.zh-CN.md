@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.39.2-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.40.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,16 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.40.0 · 模型调度：主模型指挥，次级模型干活，主模型验收
+
+- 一套派发层服务三个入口：API 主模型的 `spawn_subagent`、桌面 AI 任务的 `wickrun_delegate_task`，以及新接入的执行客户端——Codex、Claude Code、Grok 在 wickrunAI 里跑任务时每轮都拿到一个只带派发工具的 `wickrun_delegate` MCP，可以把一段推理或一件独立的事派给别的模型。
+- 两种 worker：`reason` 纯推理；`work` 带工具，但只能在派发时指定的目录与权限内干活，且必须写明用途。目录默认是你所有已配置的路由 × 模型，设置里可排除。
+- 不再有调用次数上限；只留防失控（同样的任务连派 4 次、同一结果退回超过 3 次即拒绝）和可选的花费上限（默认关，到了上限主模型必须问你）。
+- 主模型监督与验收：worker 返回结构化报告，每个派发结果都要一次判定（采用 / 部分采用 / 退回重做 / 弃用，附核对理由）；没判定的进入 4.39 的交付检查，收尾落成「完成 · N 项未核实」，绝不默认当作已采用。
+- 官方托管路由在你授权后可派给更低价或免费模型，请求带派发标头，服务端按被派发模型计费。
+
+细节、边界与计费合同见 [4.40.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.40.0.md)。
 
 ## 4.39.0 · 任务收得了尾；小模型装得下；撞限额换路而不是干等
 
