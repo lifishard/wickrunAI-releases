@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.39.2-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.40.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,16 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.40.0 · Model delegation: the main model directs, secondary models work, the main model accepts
+
+- One delegation layer serves three entry points: the API main model (`spawn_subagent`), desktop AI tasks (`wickrun_delegate_task`) and, new, the execution clients: Codex, Claude Code and Grok running inside wickrunAI get a scoped `wickrun_delegate` MCP server each turn and can hand a piece of reasoning or an independent job to another model.
+- Two worker kinds: `reason` (pure inference) and `work` (tools, only inside the directory and permission set named at delegation, with a stated purpose). The catalog is every configured route × model, excludable in settings.
+- No call-count limits; what remains is a runaway guard (the same task four times, or more than three redos) and an optional spend cap, off by default, that makes the main model ask you.
+- Supervision and acceptance: workers return a structured report and every job needs a verdict (adopt, partial, redo, discard, with what was checked); unjudged results feed the 4.39 delivery check and end as "completed · N unverified", never silently adopted.
+- The hosted route may delegate to cheaper or free models once you allow it; such requests carry a delegation header so the server bills the delegated model's price.
+
+Details, limits and the billing contract are in the [4.40.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.40.0.md).
 
 ## 4.39.0 · Tasks finish; small models fit; rate limits switch routes instead of waiting
 
