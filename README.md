@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.40.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.41.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,14 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.41.0 · Delegation scorecard; tiered prompts and tools for small models; main-process requests under the governor
+
+- A delegation scorecard keeps each model's completed / failed / sent-back counts, spend and last failure per account × model across runs; the main model sees it in the catalog together with RouteGovernor marks, cannot delegate to a model marked unavailable, and is warned about one in cooldown. The billing panel labels delegated lines.
+- The fixed prefix is tiered: small windows get the essential rules and a folded skill index, and six core tools plus `find_tools` for on-demand activation; the same task's prefix drops from 8.2K to 2.2K tokens, so a known 8K window dispatches instead of pausing. Large cloud windows are unchanged.
+- Brain-proxy requests (Codex / Claude Code on a wickrunAI route) and desktop AI workers go through RouteGovernor admission and recording; Android passes response headers to the pacer; team and butler runs switch routes mid-run; health lands on the route that actually served.
+
+Details and limits are in the [4.41.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.41.0.md).
 
 ## 4.40.0 · Model delegation: the main model directs, secondary models work, the main model accepts
 
