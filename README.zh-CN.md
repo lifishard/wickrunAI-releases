@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.43.1-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.44.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,17 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.44.0 · 上下文压缩不再频繁、Shopify 结账、遥控态手机能用电脑的连接器
+
+大窗口模型上的长 Work 不再每两轮压缩一次。以前固定在 32K 触发，不看模型窗口也不看 85K 预算；有用户在 Opus 5.5 上 5 分钟压缩了 5 次。
+
+- **压缩按真实窗口来**：已知云端模型按公开窗口表取上限（你自己填的窗口优先），到上限 85% 才压缩，把工具输出折叠到 ≤60%，两次之间至少隔 4 轮，超过 90% 硬上限才例外。小窗口和本地模型保持 4.41 的做法。Opus 上 30 轮 Work 的压缩次数从 17 降到 0。
+- **经 UCP 在 Shopify 结账**：内置 `shopify` 连接器用每台设备自己的密钥签名请求（RFC 9421）。查商品、购物车、准备结账是第 0 级；取消结账、打开结账页每次都问；完成付款一律拒绝，付款在 Shopify 自己的页面上完成。确认卡显示 Shopify 返回的总价；管家自主运行时只把结账排成待确认。
+- **遥控态的手机能用电脑的连接器**，各进程共用同一套级别规则。OAuth 令牌在过期前刷新，移除连接器时到服务器撤销。
+- 「对话资料」按钮换成图片样式图标。
+
+UCP 配置文件托管、Shopify 未实测的假设、手工维护的窗口表见 [4.44.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.44.0.md)。
 
 ## 4.43.0 · 连接器与扩展：模型能调用你接入的 MCP 服务器
 
