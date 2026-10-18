@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.42.1-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.43.1-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,17 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.43.0 · Connectors and extensions: the model can call the MCP servers you plug in
+
+wickrunAI is now an MCP client. Tools used to be a fixed built-in set; now any MCP server you add in Settings → Connectors (a local command or a remote address) brings its tools into the conversation, the approval chain and the 4.41 tool tiers, as `mcp__<connector>__<tool>`.
+
+- **A curated catalog ships with the app and works offline**: 48 entries, with GitHub, Context7, Notion, Obsidian, Tavily, Brave Search, Google Maps, Amap and Higgsfield up front; each lists its maintainer, permissions, where your data goes, prerequisites and when it was checked. You can also add servers by hand or paste a Claude Desktop / Cursor `mcpServers` JSON. No affiliation with any provider.
+- **Logins and keys never pass through wickrunAI**: OAuth 2.1 + PKCE completes on your device, tokens live in the system secure store out of the renderer's reach, and requests go from your device straight to the service, hosted route included, billed as ordinary tokens.
+- **Money actions come in three tiers**: searching, comparing and carts follow ordinary approval; ordering, booking, subscribing and closing a negotiated price always ask on a card we render, with no "always allow" and per-action / daily caps; transfers, paying people, FX and trading your own account are refused. Card numbers in arguments are blocked. The Butler gets the first two tiers, delegated workers only tier 0.
+- **Android in standalone mode reaches remote connectors too** (local-command servers stay desktop-only), with login returning through `wickrunai://connectors/callback`.
+
+Endpoints, tier rules and known gaps (connectors from a phone in remote-control mode; shopping / checkout connectors in 4.44) are in the [4.43.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.43.0.md).
 
 ## 4.42.0 · Work inside shared conversations: run on your own machine, share the process; patches, sidebar, cross-client artifacts
 
