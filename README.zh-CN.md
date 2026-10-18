@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.42.1-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.43.1-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,17 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.43.0 · 连接器与扩展：模型能调用你接入的 MCP 服务器
+
+wickrunAI 现在是 MCP 客户端。以前模型能用的工具是写死的一组；现在你在「设置 → 连接器」里接入任何 MCP 服务器（本机命令或远程地址），它的工具就进对话、进审批、进 4.41 的分档，模型看到的是 `mcp__<连接器>__<工具>`。
+
+- **精选目录随版本发布、离线可看**：48 条，首屏 GitHub、Context7、Notion、Obsidian、Tavily、Brave Search、Google Maps、高德、Higgsfield；每条写维护者、权限、数据去向、前提与核实月份。也可以手填或粘贴 Claude Desktop / Cursor 的 `mcpServers` JSON 导入。与任何服务商无隶属关系。
+- **登录和密钥不经过 wickrunAI**：OAuth 2.1 + PKCE 在你的设备上完成，令牌存系统安全存储，渲染进程读不到；请求从你的设备直接发到对方，用官方托管路由时也一样，只按普通 token 计费。
+- **金钱动作分三级**：找、比、选、加购、算价按普通审批；下单、订票、订阅、议价成交每次由人在我们渲染的确认卡上点一次，没有「总是允许」，有单笔与当日限额；转账、给人付款、换汇、动你本人账户的交易一律拒绝。参数里出现卡号直接拦。管家可用前两级，被派发的子模型只有第 0 级。
+- **Android 独立态也能接远程连接器**（本机命令类仅桌面），登录经 `wickrunai://connectors/callback` 回到应用。
+
+端点、级别规则、已知缺口（遥控态下手机暂不能用连接器；购物 / 结账类 4.44 再接）见 [4.43.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.43.0.md)。
 
 ## 4.42.0 · 共同对话里也能干活：各自执行，共享过程；补丁、侧栏、跨端 artifact
 
