@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.45.3-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.46.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,17 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.46.0 · Smoother on laptops and tablets: measured jank fixes, one file per conversation, a slimmer bundle
+
+Clicks, scrolling and hover were measured in a real browser with a large library and a streaming answer. The causes found in the profiles were fixed, and each fix was measured again.
+
+- **Opening a long conversation**: drops from about 2.3 s to 64 ms on a laptop-class CPU (280 ms at 4× CPU slowdown). Newest turns render first, unchanged conversations are no longer re-saved, and Markdown is no longer re-parsed and sanitized every time.
+- **One file per conversation**: a save writes only the conversations that changed instead of the whole library. Existing data moves over on the first save.
+- **Slimmer start-up**: the main bundle shrinks from 9.4 MB to 7.4 MB. The Traditional Chinese converter, the English dictionary and the code highlighter load only when they are used.
+- **Interactive HTML previews**: on the desktop app, a page's own scripts now run in the side panel, isolated from the app and the network, and its text can be annotated.
+
+See the [4.46.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.46.0.md) and [4.45.3](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.45.3.md).
 
 ## 4.45.0 · Plan, execute and review; plain language; conversation fixes
 
