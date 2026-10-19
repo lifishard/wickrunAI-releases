@@ -8,7 +8,7 @@
 
 Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-4.44.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.45.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -34,6 +34,16 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.45.0 · Plan, execute and review; plain language; conversation fixes
+
+A compact control lets you choose one model to plan and review, and another to execute.
+
+- **Plan through acceptance**: resumable stages and per-condition review, with gaps kept visible.
+- **Plain language**: a person icon cycles through three styles using color alone.
+- **Messages and connectors**: new messages stay at the end, top notices can be closed, platform icons return, GitHub reuses local gh login, and TradingView MCP joins the catalog.
+
+This release targets Windows, Linux and Android; macOS is skipped. See the [4.45.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.45.0.md).
 
 ## 4.44.0 · Fewer context compactions, Shopify checkout, connectors from a phone in remote-control mode
 
