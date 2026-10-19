@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.45.3-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.46.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,17 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.46.0 · 笔记本和平板更顺滑：实测卡顿修复、每段对话单独存储、主包瘦身
+
+这一版在真实浏览器里测量了大量对话和流式输出时的点击、滚动和悬停反应，按性能分析找到的原因逐个修复，每修一处都重新测量。
+
+- **打开长对话**：从约 2.3 秒降到 64 毫秒（笔记本级处理器；4 倍限速时约 280 毫秒）。现在先显示最新几轮；内容没变的对话不再重存；Markdown 不再每次重新解析和消毒。
+- **每段对话单独存储**：保存时只写变化的对话，不再整库重写。原有数据在第一次保存时自动迁移。
+- **主包瘦身**：从 9.4 MB 降到 7.4 MB。繁体词库、英文词典和代码高亮库改为用到时才载入。
+- **HTML 预览可交互**：桌面版侧栏里，页面自带的脚本可以运行，与应用和网络隔离，页面文字也可以标注。
+
+详见 [4.46.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.46.0.md) 与 [4.45.3](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.45.3.md)。
 
 ## 4.45.0 · 计划执行、人话模式与对话修复
 
