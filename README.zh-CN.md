@@ -8,7 +8,7 @@
 
 开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-4.44.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-4.45.0-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -38,6 +38,16 @@
 <!-- /releases-readme:installer -->
 
 ---
+
+## 4.45.0 · 计划执行、人话模式与对话修复
+
+新增简洁的计划执行入口：指定模型规划和验收，另一个模型执行。新消息顺序、顶部提示及连接器登录同时修复。
+
+- **计划到验收**：选择两个模型后按阶段推进，暂停可以续接，未通过的验收保留缺口。
+- **人话模式**：右下角人形图标三态切换，只改变颜色。
+- **聊天与连接器**：新消息留在尾部、提示可关闭、恢复平台图标；GitHub 沿用本机 gh 登录，新增 TradingView MCP。
+
+本版 Windows／Linux／Android，跳过 macOS。详见 [4.45.0 发布说明](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.45.0.md)。
 
 ## 4.44.0 · 上下文压缩不再频繁、Shopify 结账、遥控态手机能用电脑的连接器
 
