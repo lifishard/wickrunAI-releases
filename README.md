@@ -4,11 +4,11 @@
 
 # wickrunAI · 灯芯AI
 
-**Every AI model you own, in one app — and when one fails, the next one takes over mid-task.**
+**Okta for AI — One workspace to orchestrate all your AI.**
 
-Open or closed, paid or free. Bring your own keys; cloud sync is optional, and sharing never transfers your credentials.
+Bring your own keys and the AI clients you already use; chat, work on files, run group chats, boards and the butler from one place. Cloud sync is optional, and sharing never transfers your credentials.
 
-[![Version](https://img.shields.io/badge/version-6.5.2-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-6.5.3-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -563,40 +563,15 @@ Three routes, two handovers, one task, nobody watching. The order is a list **yo
 
 Then, when you want more: add a second key and put both routes in the failover list, add a working directory for file tools, or configure a search service. See [Configuration](https://github.com/lifishard/wickrunAI/blob/main/docs/CONFIGURATION.md).
 
-## How it compares
-
-wickrunAI is one of many bring-your-own-key clients. What is specific to it is what happens when a model stops working in the middle of a task.
-
-Only the wickrunAI column is a claim about this repository, verified against the source. For the other products, a cell says **—** wherever this table's authors have not verified the answer; **— does not mean the product lacks the feature.** Correct any of it by opening an issue.
-
-| | wickrunAI | Chatbox | LobeChat | Cherry Studio | Open WebUI |
-|---|---|---|---|---|---|
-| Bring your own API key | Yes | Yes | Yes | Yes | Yes |
-| Runs as a desktop application | Yes (Electron) | Yes | — | Yes | No — self-hosted web server |
-| Automatic handover to the next route mid-task, carrying saved progress | Yes | — | — | — | — |
-| Failover list scoped session → project → app, each level able to inherit or override | Yes | — | — | — | — |
-| Route ranking computed from your own finished tasks | Yes | — | — | — | — |
-| Keys encrypted into the OS keystore | Yes | — | — | — | — |
-| Phone relays tool calls to your desktop over the LAN | Yes | — | — | — | — |
-| Calls subscription CLIs installed on your machine (Claude Code, Codex, Kimi Code) | Yes | — | — | — | — |
-| License | Proprietary, free to use | — | — | — | — |
-
-The four rows in the middle are the ones worth reading the code for:
-
-- **[LLM failover](https://github.com/lifishard/wickrunAI/blob/main/docs/llm-failover.md)** — which errors trigger a handover, and which three deliberately do not, because switching models cannot fix a malformed request, a behavioural loop, or a cause nobody identified.
-- **[Multi-model router](https://github.com/lifishard/wickrunAI/blob/main/docs/multi-model-router.md)** — done rates computed per hashed route alias, an eight-sample floor before any number is shown, and a reorder button you have to click, because the program does not know which of your routes is the free one.
-- **[BYOK](https://github.com/lifishard/wickrunAI/blob/main/docs/byok-ai-client.md)** — where the key goes and what never leaves the machine.
-- **[Mobile remote bridge](https://github.com/lifishard/wickrunAI/blob/main/docs/mobile-remote-bridge.md)** — how a phone with no file access still gets file, browser and CLI tools.
-
-Full documentation index: **[docs/README.md](https://github.com/lifishard/wickrunAI/blob/main/docs/README.md)**.
+How wickrunAI compares with other bring-your-own-key clients: [docs/BYOK_COMPARISON.md](https://github.com/lifishard/wickrunAI/blob/main/docs/BYOK_COMPARISON.md). Full documentation index: **[docs/README.md](https://github.com/lifishard/wickrunAI/blob/main/docs/README.md)**.
 
 ## What it is
 
-wickrunAI is an open-source AI client for Windows, macOS, and Linux. Connect any service that uses the OpenAI-compatible API and use it to research topics, work through documents, read and write files, drive Chrome, or call the Claude Code installed on your machine.
+wickrunAI is one workspace that orchestrates all your AI, on Windows, macOS, Linux, the web and Android. Connect any service that uses the OpenAI-compatible API and use it to research topics, work through documents, read and write files, drive Chrome, or call the Claude Code installed on your machine.
 
 On a long task you can have one model gather the material, pause, then hand the work to another model to organize or check it. wickrunAI keeps your requirements, the run journal, and the original evidence. Press Continue and the new model resumes from the saved position. You still need to check the result, above all citations, arithmetic, and generated files. See [Model handoff](https://github.com/lifishard/wickrunAI/blob/main/docs/MODEL_HANDOFF.md) for how the relay works.
 
-Use an API key from a model provider, or connect an official client you already run on your machine from the desktop model picker. Accounts, subscriptions, and API charges stay with the provider. An Android client connects to your computer over the local network; it has not been verified on a physical device yet.
+Use an API key from a model provider, or connect an official client you already run on your machine from the desktop model picker. Accounts, subscriptions, and API charges stay with the provider. The Android client runs on its own or remote-controls your computer over the local network.
 
 The interface reads in Simplified Chinese, Traditional Chinese, and English, switchable from the top right. Most reference documents under `docs/` are in Chinese; the concept pages linked above are in English.
 
