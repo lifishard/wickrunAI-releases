@@ -4,11 +4,11 @@
 
 # wickrunAI · 灯芯AI
 
-**把你手上所有的 AI 模型放进同一个应用——某一个失灵时，下一个在任务中途接手。**
+**Okta for AI——一个工作空间，调度你所有的 AI。**
 
-开源的、闭源的，付费的、免费的，都能调度。Key 自己带，云同步由你选择，共享内容不会传递你的凭据。
+自带 Key 和你已在用的 AI 客户端；对话、改文件、群聊、看板和管家都在同一处。云同步由你选择，共享内容不会传递你的凭据。
 
-[![Version](https://img.shields.io/badge/version-6.5.2-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
+[![Version](https://img.shields.io/badge/version-6.5.3-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
@@ -565,40 +565,15 @@ Android 应用大约从 4.0 起就是一份独立的代码，4.4 之后的大部
 
 之后想更进一步：再加一个 Key，把两条路由都放进失灵交接名单；加一个工作目录让它能读写文件；或者配一个搜索服务。见[配置说明](https://github.com/lifishard/wickrunAI/blob/main/docs/CONFIGURATION.md)。
 
-## 和同类工具的区别
-
-自带 Key 的客户端有很多。灯芯AI 特别的地方在于：模型在任务中途不干活了之后会发生什么。
-
-下表里只有 wickrunAI 那一列是对本仓库的断言，逐条对着源码核过。其他产品的格子凡是本表作者没有核实过的一律写 **—**；**「—」不代表那个产品没有这项功能。** 有写错的地方欢迎提 issue 指出。
-
-| | wickrunAI | Chatbox | LobeChat | Cherry Studio | Open WebUI |
-|---|---|---|---|---|---|
-| 自带 API Key | 是 | 是 | 是 | 是 | 是 |
-| 以桌面应用形态运行 | 是（Electron） | 是 | — | 是 | 否——自托管 Web 服务 |
-| 任务中途自动交接到下一条路由，并带上已保存的进度 | 是 | — | — | — | — |
-| 交接名单分「本对话 → 项目 → 应用全局」三层，每层都能继承或覆盖 | 是 | — | — | — | — |
-| 按你自己跑完的任务统计路由做成率 | 是 | — | — | — | — |
-| Key 加密进系统密钥库 | 是 | — | — | — | — |
-| 手机端经局域网把工具调用转给桌面执行 | 是 | — | — | — | — |
-| 调用本机已装的订阅制 CLI（Claude Code、Codex、Kimi Code） | 是 | — | — | — | — |
-| 许可证 | 专有软件，免费使用 | — | — | — | — |
-
-中间那几行值得直接去看代码：
-
-- **[失灵交接](https://github.com/lifishard/wickrunAI/blob/main/docs/llm-failover.md)**——哪些错误触发交接，以及哪三类刻意不触发：请求本身写错了、跟模型无关的行为循环、说不清原因的，这三种换人都解决不了。
-- **[多模型路由](https://github.com/lifishard/wickrunAI/blob/main/docs/multi-model-router.md)**——按哈希后的路由别名统计做成率，样本不足八条就不给数字，重排是个要你自己点的按钮，因为程序不知道你哪条路由是免费的。
-- **[BYOK](https://github.com/lifishard/wickrunAI/blob/main/docs/byok-ai-client.md)**——Key 存在哪，什么东西从不离开这台机器。
-- **[手机遥控桥](https://github.com/lifishard/wickrunAI/blob/main/docs/mobile-remote-bridge.md)**——没有文件权限的手机怎么照样用上文件、浏览器和 CLI 工具。
-
-完整文档索引：**[docs/README.md](https://github.com/lifishard/wickrunAI/blob/main/docs/README.md)**。
+和其他自带 Key 客户端的对比：[docs/BYOK_COMPARISON.md](https://github.com/lifishard/wickrunAI/blob/main/docs/BYOK_COMPARISON.md)。完整文档索引：**[docs/README.md](https://github.com/lifishard/wickrunAI/blob/main/docs/README.md)**。
 
 ## 这是什么
 
-灯芯AI 是一个开源 AI 客户端，支持 Windows、macOS 和 Linux。你可以连接采用 OpenAI 兼容接口的模型，用它查资料、处理文档、读写文件，也可以授权它操作 Chrome 或调用本机的 Claude Code。
+灯芯AI 是一个调度你所有 AI 的工作空间，支持 Windows、macOS、Linux、网页和 Android。你可以连接采用 OpenAI 兼容接口的模型，用它查资料、处理文档、读写文件，也可以授权它操作 Chrome 或调用本机的 Claude Code。
 
 做长任务时，你可以先让一个模型搜集资料，暂停后换另一个模型整理或检查。灯芯AI 会保存你的要求、执行记录和原始资料；点击“接着跑”，新模型就能从保存的位置继续。你仍需要检查结果，特别是引用、计算和生成的文件。接力方式见 [模型接力说明](https://github.com/lifishard/wickrunAI/blob/main/docs/MODEL_HANDOFF.md)。
 
-可使用模型服务商的 API Key，也可在桌面版模型选择器中连接本机官方客户端。账号、订阅和 API 费用由对应服务商管理。项目另有 Android 客户端，可通过局域网连接电脑；目前尚未完成真机验证。
+可使用模型服务商的 API Key，也可在桌面版模型选择器中连接本机官方客户端。账号、订阅和 API 费用由对应服务商管理。Android 客户端可独立运行，也可通过局域网遥控电脑。
 
 界面支持简体中文、繁體中文和 English，在右上角切换；`docs/` 下的参考文档多数是中文，上面链接的五篇概念页是英文。
 
