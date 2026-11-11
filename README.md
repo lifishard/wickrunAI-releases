@@ -28,14 +28,14 @@
 
 wickrunAI puts all the AI you use into one app, on Windows, macOS, Linux, the web and Android. You connect your own model accounts and the AI apps you already use, such as Claude Code and Codex, and work with all of them in one place. Your accounts, subscriptions and bills stay with each provider.
 
-## One desk for all your AI
+## What it does for you
 
 A pile of subscriptions, and you still work across five windows, pasting back and forth? wickrunAI brings them into one place:
 
-- **Every model, one desk.** Bring your own keys. Chat, file work, group chats, boards and the butler all happen in the same place
-- **Rate limits do not stop the work.** Hit a 429 and it switches to another route by itself, so you are not stuck waiting in a queue
-- **Tasks get finished.** Nothing is lost midway, and results are checked item by item before delivery. No "looks done"
-- **Keys stay on your device.** Cloud sync is optional, sign-ins and credentials stay on this computer, and sharing never carries them
+- **Every model, one way in**: bring your own keys; chat, file work, group chats, boards and the butler all happen in the same place
+- **One conversation, everyone carries on**: several models and several people in the same conversation, each with their own AI, and every step is recorded
+- **Rate limits do not stop the work**: set your takeover order, and when one account hits its limit the next one picks up by itself
+- **Tasks finish without breaking off**: nothing is lost midway, and results are checked item by item before delivery. No "looks done"
 
 ## Your first answer in a minute
 
