@@ -4,19 +4,53 @@
 
 # wickrunAI · 灯芯AI
 
-**Okta for AI — One workspace to orchestrate all your AI.**
-
-Bring your own keys and the AI clients you already use; chat, work on files, run group chats, boards and the butler from one place. Cloud sync is optional, and sharing never transfers your credentials.
+**One workspace to orchestrate all your AI.**
 
 [![Version](https://img.shields.io/badge/version-6.8.2-1f6feb)](https://github.com/lifishard/wickrunAI-releases/releases)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android-lightgrey)](https://github.com/lifishard/wickrunAI-releases/releases/latest)
 
-[Download](https://wickrunai.com/download) · [Docs](https://github.com/lifishard/wickrunAI/blob/main/docs/README.md) · [Configuration](https://github.com/lifishard/wickrunAI/blob/main/docs/CONFIGURATION.md) · [Security](https://github.com/lifishard/wickrunAI/blob/main/SECURITY.md)
+[Download](https://wickrunai.com/download) · [All releases](https://github.com/lifishard/wickrunAI-releases/releases) · [Report a problem](https://github.com/lifishard/wickrunAI-releases/issues)
 
 **English** · [简体中文](README.zh-CN.md)
 
 </div>
+
+<div align="center">
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/demo.en.dark.svg"><img src="assets/demo.en.light.svg" width="800" alt="Animated illustration in four scenes: connecting the AI you already use, several models answering in one conversation, a task moving to your next account when one runs out, and two people editing one file with their own AI."></picture>
+
+<sub>Illustration, not a screen recording.</sub>
+
+</div>
+
+## What it is
+
+wickrunAI puts all the AI you use into one app, on Windows, macOS, Linux, the web and Android. You connect your own model accounts and the AI apps you already use, such as Claude Code and Codex, and work with all of them in one place. Your accounts, subscriptions and bills stay with each provider.
+
+## What it does for you
+
+**Your AI is spread over several apps and subscriptions, and your conversations and files end up scattered.** Connect them all here: the key a model provider gives you, the AI apps signed in on your computer (Claude Code, Codex, Kimi Code, Grok), and local models from Ollama or LM Studio. Conversations, files and projects stay in one place.
+
+**A model hits its usage limit or stalls halfway, and you have to explain everything again somewhere else.** List two or more of your accounts in the order you want. When one runs out of quota or keeps getting refused, the task moves to the next one and continues from where it stopped. You set the order once, and only accounts you connected are used. This applies to model accounts connected with a key; the AI apps signed in on your computer, such as Claude Code, do not take part in the automatic takeover. If you pause and pick another model yourself, it also picks up from the saved point.
+
+**You want a second opinion from another model, so you copy and paste between windows.** Bring several models into the same conversation, or have one model check another's work, without copying anything.
+
+**Teammates share AI results as screenshots, and nobody can pick up the actual conversation.** Share the conversation itself. Teammates can read it, comment, or carry on with their own AI accounts. Every message and every change to a file shows who made it and with which model, and people and models can edit the same file at the same time.
+
+**You do not want to hand your keys or your conversations to yet another service.** Your keys are kept in your computer's protected storage and stay on that device unless you turn on key sync. Cloud sync is your choice. What you sync or share is end-to-end encrypted, so our server cannot read it, and sharing never passes on your keys.
+
+## Your first answer in a minute
+
+1. **Download.** Get wickrunAI from [wickrunai.com/download](https://wickrunai.com/download) and install it. No account, no sign-up.
+2. **Add one key.** Open Settings → API credentials, paste the address and key from your model provider, and press **Test connection**. To start for free, pick the OpenRouter preset.
+3. **Ask something.** Choose a model next to the message box and send.
+
+Later you can add a second account to take over when the first runs out, give the AI a folder to work in, or connect the AI apps on your computer from the model picker.
+
+The free tier covers your own keys, one account, local projects and local models. Taking over across accounts, sharing and working together are part of the paid plans, which start with a 14-day free trial. When a plan lapses you are only downgraded and your data stays. The plans page in the app has the current details.
+
+## Download
 
 <!-- releases-readme:installer -->
 
@@ -33,585 +67,37 @@ The `.yml` and `.blockmap` files are for automatic updates. Installers are not c
 
 <!-- /releases-readme:installer -->
 
----
+## Three generations
 
-## 4.46.0 · Smoother on laptops and tablets: measured jank fixes, one file per conversation, a slimmer bundle
+### 4.0 · Work with other people
 
-Clicks, scrolling and hover were measured in a real browser with a large library and a streaming answer. The causes found in the profiles were fixed, and each fix was measured again.
+Share files, folders, conversations and projects with people on other accounts, and choose who can view, comment or edit. Teammates join the same conversation, and every AI reply shows whose account and which model wrote it.
 
-- **Opening a long conversation**: drops from about 2.3 s to 64 ms on a laptop-class CPU (280 ms at 4× CPU slowdown). Newest turns render first, unchanged conversations are no longer re-saved, and Markdown is no longer re-parsed and sanitized every time.
-- **One file per conversation**: a save writes only the conversations that changed instead of the whole library. Existing data moves over on the first save.
-- **Slimmer start-up**: the main bundle shrinks from 9.4 MB to 7.4 MB. The Traditional Chinese converter, the English dictionary and the code highlighter load only when they are used.
-- **Interactive HTML previews**: on the desktop app, a page's own scripts now run in the side panel, isolated from the app and the network, and its text can be annotated.
+### 5.0 · One set of files for the whole team
 
-See the [4.46.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.46.0.md) and [4.45.3](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.45.3.md).
+Shared folders and projects can keep one copy of each file in the cloud, with its full history, so everyone sees the same version on the web, desktop and phone. When two people edit at once, nobody's work is overwritten, and you can hand a task to the AI on your own or a teammate's computer and review the result.
 
-## 4.45.0 · Plan, execute and review; plain language; conversation fixes
+[5.0.0 release notes](https://github.com/lifishard/wickrunAI-releases/releases/tag/v5.0.0)
 
-A compact control lets you choose one model to plan and review, and another to execute.
+### 6.0 · People and AI edit the same file live
 
-- **Plan through acceptance**: resumable stages and per-condition review, with gaps kept visible.
-- **Plain language**: a person icon cycles through three styles using color alone.
-- **Messages and connectors**: new messages stay at the end, top notices can be closed, platform icons return, GitHub reuses local gh login, and TradingView MCP joins the catalog.
+Several people and their AI can work in one file at the same time. Changes appear on everyone's screen right away, each one marked with who or which model made it, and any earlier version can be restored.
 
-This release targets Windows, Linux and Android; macOS is skipped. See the [4.45.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.45.0.md).
+[6.0.0 release notes](https://github.com/lifishard/wickrunAI-releases/releases/tag/v6.0.0)
 
-## 4.44.0 · Fewer context compactions, Shopify checkout, connectors from a phone in remote-control mode
-
-Long Work runs on large-window models stop compacting every couple of rounds. A fixed 32K trigger used to ignore the model window and the 85K budget; on Opus 5.5 one user saw five compactions in five minutes.
-
-- **Compaction follows the real window**: known cloud models use a published window table (a window you set always wins), compaction triggers at 85% of the limit, folds tool output to at most 60%, and waits at least four rounds unless the 90% hard limit is reached. Small and local models keep the 4.41 behaviour. A 30-round Opus Work run went from 17 compactions to 0.
-- **Shopify checkout through UCP**: a built-in `shopify` connector signs requests with a per-device key (RFC 9421). Searching, carts and preparing a checkout are tier 0; cancelling or opening the checkout page asks each time; completing payment is refused, so you pay on Shopify's own page. The confirmation card shows the total Shopify returned, and the autonomous Butler only queues checkouts for you to confirm.
-- **Phones in remote-control mode use the computer's connectors**, with tier rules shared by every process. OAuth tokens refresh before they expire and are revoked at the server when you remove a connector.
-- The 对话资料 button gets a picture-style icon.
-
-The hosted UCP profile, unverified Shopify assumptions and the hand-maintained window table are covered in the [4.44.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.44.0.md).
-
-## 4.43.0 · Connectors and extensions: the model can call the MCP servers you plug in
-
-wickrunAI is now an MCP client. Tools used to be a fixed built-in set; now any MCP server you add in Settings → Connectors (a local command or a remote address) brings its tools into the conversation, the approval chain and the 4.41 tool tiers, as `mcp__<connector>__<tool>`.
-
-- **A curated catalog ships with the app and works offline**: 48 entries, with GitHub, Context7, Notion, Obsidian, Tavily, Brave Search, Google Maps, Amap and Higgsfield up front; each lists its maintainer, permissions, where your data goes, prerequisites and when it was checked. You can also add servers by hand or paste a Claude Desktop / Cursor `mcpServers` JSON. No affiliation with any provider.
-- **Logins and keys never pass through wickrunAI**: OAuth 2.1 + PKCE completes on your device, tokens live in the system secure store out of the renderer's reach, and requests go from your device straight to the service, hosted route included, billed as ordinary tokens.
-- **Money actions come in three tiers**: searching, comparing and carts follow ordinary approval; ordering, booking, subscribing and closing a negotiated price always ask on a card we render, with no "always allow" and per-action / daily caps; transfers, paying people, FX and trading your own account are refused. Card numbers in arguments are blocked. The Butler gets the first two tiers, delegated workers only tier 0.
-- **Android in standalone mode reaches remote connectors too** (local-command servers stay desktop-only), with login returning through `wickrunai://connectors/callback`.
-
-Endpoints, tier rules and known gaps (connectors from a phone in remote-control mode; shopping / checkout connectors in 4.44) are in the [4.43.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.43.0.md).
-
-## 4.42.0 · Work inside shared conversations: run on your own machine, share the process; patches, sidebar, cross-client artifacts
-
-- Shared conversations are no longer chat-only: editor-role members send Work turns that run on their own machine, in a directory they bind, with their own route and approvals; a slim projection of the working process (step summaries, change previews, output files, delivery result, delegation ledger, live status) syncs into the conversation, others see a read-only card and "X is running…", and any editor continues in their own directory with the full shared history.
-- Other members' code changes arrive as patch cards: full diffs stored as shared files, applied into your bound directory with `git apply --3way` (line-based merge outside Git); on conflict nothing is written to your directory — the conversation's AI gets two rounds, then you choose; a "same repository, you can also git pull" hint appears when remotes match.
-- A right sidebar lists links, files, images and patches, with open, download, jump-to-message and apply.
-- Output files of personal conversations can be hosted to My Space so Android and the web open them; artifacts in shared conversations were already shared files with one preview everywhere.
-
-Server contract, limits and risks are in the [4.42.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.42.0.md).
-
-## 4.41.0 · Delegation scorecard; tiered prompts and tools for small models; main-process requests under the governor
-
-- A delegation scorecard keeps each model's completed / failed / sent-back counts, spend and last failure per account × model across runs; the main model sees it in the catalog together with RouteGovernor marks, cannot delegate to a model marked unavailable, and is warned about one in cooldown. The billing panel labels delegated lines.
-- The fixed prefix is tiered: small windows get the essential rules and a folded skill index, and six core tools plus `find_tools` for on-demand activation; the same task's prefix drops from 8.2K to 2.2K tokens, so a known 8K window dispatches instead of pausing. Large cloud windows are unchanged.
-- Brain-proxy requests (Codex / Claude Code on a wickrunAI route) and desktop AI workers go through RouteGovernor admission and recording; Android passes response headers to the pacer; team and butler runs switch routes mid-run; health lands on the route that actually served.
-
-Details and limits are in the [4.41.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.41.0.md).
-
-## 4.40.0 · Model delegation: the main model directs, secondary models work, the main model accepts
-
-- One delegation layer serves three entry points: the API main model (`spawn_subagent`), desktop AI tasks (`wickrun_delegate_task`) and, new, the execution clients: Codex, Claude Code and Grok running inside wickrunAI get a scoped `wickrun_delegate` MCP server each turn and can hand a piece of reasoning or an independent job to another model.
-- Two worker kinds: `reason` (pure inference) and `work` (tools, only inside the directory and permission set named at delegation, with a stated purpose). The catalog is every configured route × model, excludable in settings.
-- No call-count limits; what remains is a runaway guard (the same task four times, or more than three redos) and an optional spend cap, off by default, that makes the main model ask you.
-- Supervision and acceptance: workers return a structured report and every job needs a verdict (adopt, partial, redo, discard, with what was checked); unjudged results feed the 4.39 delivery check and end as "completed · N unverified", never silently adopted.
-- The hosted route may delegate to cheaper or free models once you allow it; such requests carry a delegation header so the server bills the delegated model's price.
-
-Details, limits and the billing contract are in the [4.40.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.40.0.md).
-
-## 4.39.0 · Tasks finish; small models fit; rate limits switch routes instead of waiting
-
-- A task ends on the protocol signal; the eight serial gates become one delivery check on objective evidence, with at most two repair rounds, and whatever is left ends as "completed · N unverified" (Fix / Verify myself / Ignore) instead of a pause. Codex, Claude Code and Grok completions are trusted; "evidence must be a callId" is gone from tool descriptions, prompt and code alike.
-- Every wait has a name and a deadline: quiet at 60 s, a probe at 3 min, a re-issue or status question at 10 min, an automatic stop with the scene saved at 15 min; Claude Code now stops on 15 min idle. An optional strict mode runs a read-only verifier subagent.
-- Unknown context windows are assumed by tier (8K for local, free and small models, 32K otherwise, labelled as assumed and learned upward); the output reserve scales with the window so a known 8K model no longer pauses on entering Work; compaction no longer rejects fenced output, preambles or missing source ids, and falls back to an extractive summary.
-- 429s are paced per account × model (AIMD plus a token bucket) with computed waits instead of a fixed 62 s; two consecutive 429s switch to the next route mid-run; plan, billing and missing-model errors switch at once and mark the route for six hours; provider `reasoning_effort` enums are learned from 400s and retried immediately. Queued state reads "queued by quota · attempt N · about X s" with a switch-now button.
-
-See the [4.39.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.39.0.md) for the run data behind this, the trade-offs and the limits.
-
-## 4.38.0 · Phone and tablet: run on their own, or remote-control the computer
-
-- One visible state on mobile: "Standalone" or "Remote: <your computer> · online". Standalone chats, attaches files, uses cloud models, project docs and web search on the device itself; tools that need files or a terminal are simply not offered to the model. Remote runs every tool on the computer, and the working-directory picker lists the computer's folders.
-- Pairing is one confirmation: turn on "Allow phones and tablets to control this computer", the tablet finds it under the same account (or you type the address once), and you type the tablet's code on the computer. The computer shows who is connected in the tray, with a one-click disconnect.
-- Transport is HTTPS with a pinned certificate over the local network or Tailscale; no more plaintext and no more hand-copied tokens. The old setup could not connect from Android at all.
-- If the computer goes offline mid-task, the task waits instead of feeding errors to the model, and resumes when it is back.
-
-See the [4.38.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.38.0.md) for the security changes and what still needs a physical device.
-
-## 4.37.0 · Parallel work is just something the AI does
-
-- Ask for another task in plain words, or type `/work` or `/chat`, and the AI opens it in an isolated copy. The separate "parallel tasks" panel is gone; what people need (running tasks, merges waiting for approval, conflicts) lives in the Activity panel.
-- Inside a Git repository the isolation is a `git worktree` on its own branch; merging back uses Git, a merged session keeps working, and a conflict goes back to that session's AI before it ever reaches you. Outside Git, the file copy stays, now with a real three-way merge.
-- A coordination message can wake an idle task instead of waiting for its next model call.
-
-See the [4.37.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.37.0.md) for how merges, conflicts and uncommitted changes are handled.
-
-## 4.36.0 · A store that stays small
-
-- Large cloud-sync snapshots, archives and attachment caches now live in their own files instead of one 300 MB `store.json`; writing any of them no longer rewrites everything. A one-time migration on first start keeps a byte-for-byte copy of the old file, and Settings offers a restore.
-- Run states are saved slim once the run journal holds them, and recorded diff lines are rebuilt from the version store instead of being stored in every conversation. One conversation measured at 51 MB drops to a few MB.
-- The main process keeps a small conversation index instead of parsing every conversation on every tool call; sending no longer saves all conversations first.
-- Backups cover the new folders, and quitting waits in proportion to the last save instead of a fixed 3 seconds.
-
-See the [4.36.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.36.0.md) for what changed on disk, what the migration keeps, and what still needs a later release.
-
-## 4.35.0 · Group chats live on Home; no more renderer crashes from recorded diffs
-
-- Every group chat opens in the Home reader and composer, whichever way you reach it: sidebar, shared drive, share link, a new chat or an imported share. The shared space keeps a read-only transcript for guests only.
-- Home labels each message with the member's name, marks your own, shows the model for AI replies, and never lets you edit or retry another member's message. Work mode stays off inside a shared chat; Share settings open from the banner.
-- Fixed the renderer being killed by the system: closed code-change disclosures mounted every recorded diff line (one conversation held 56,813 lines, over 300,000 DOM nodes). Diff lines now render only when opened, 400 at a time.
-- Attachments no longer flash when an answer arrives; a draft you keep typing is not overwritten by its own sync echo; a missing shared attachment no longer leaves a conversation stuck in "preparing"; artifact links inside shared chats open again.
-
-See the [4.35.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.35.0.md) for the crash analysis and what changed in the shared space.
-
-## 4.34.0 · Conversations, files and tasks together
-
-- Show submitted text, pictures and files before model preparation; recover drafts on failure.
-- Use the Home reader and composer for shared chats, with human/AI send modes and your own model connection.
-- Keep unsent skills, attachments and quotes inside each conversation.
-- Attach files on tablets and import workspace folder copies into project documents.
-- Host encrypted artifacts with their static assets and open interactive previews across authorized clients.
-- Preserve shared file context and browse files, pictures and links in the conversation resources sidebar.
-- Create, pause, resume and review independent tasks while retaining Work isolation and conflict protection.
-
-See the [4.34.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.34.0.md) for supported artifact formats, folder import behavior and access requirements.
-
-## 4.33.0 · Butler execution and lighter operation
-
-- **Complete tasks**: remove fixed task character ceilings; accepted suggestions use concise, sourced handoffs and normal Work approvals.
-- **Less repeated work**: debounce before history projection, reuse unchanged serialization, and avoid copying large directories for everyday Butler tasks.
-- **Compact workspace**: show two output files initially, sort recent chats across projects by opening and activity, and use plain day numbers in the month grid.
-- **Everyday needs**: ground food, travel, household and scheduling suggestions in actual evidence and ask for missing essential facts.
-
-See the [4.33.0 release notes](https://github.com/lifishard/wickrunAI-releases/releases/tag/v4.33.0).
-
-## 4.32.0 · Team goals and milestone confirmations
-
-Connect team objectives to existing tasks, with progress and milestone achievement shown separately.
-
-- **Goals and plans:** create milestones or key results, link board tasks, summarize progress and add deadlines to the team calendar.
-- **Two confirmation rows:** AI checks with the requester's model connection; a person confirms separately with an optional note. Both must confirm achievement, and changed evidence invalidates old confirmations.
-- **Review before publishing:** AI drafts a private weekly review; its author reads, edits and confirms publication before the group sees it.
-
-This extends the group collaboration space. See the [4.32.0 release notes](https://github.com/lifishard/wickrunAI-releases/releases/tag/v4.32.0).
-
-## 4.31.0 · Team calendar
-
-Plan schedules inside a shared group and connect them to ongoing work.
-
-- **Calendar views:** create events in day, week and month views, with time zones and links to conversations, projects and tasks.
-- **Import and sync:** ICS files and private feeds; Google Calendar and Outlook two-way sync after OAuth setup, with explicit calendar selection and conflict resolution.
-- **Reminders:** opt-in notifications and email; administrators can revoke external subscription links.
-
-See the [4.31.0 release notes](https://github.com/lifishard/wickrunAI-releases/releases/tag/v4.31.0) for setup requirements and supported platforms.
-
-## 4.30.0 — Shared conversations: chat with people or ask your own AI
-
-Continue a shared conversation from Home or Drive with the same transcript. Sending text to people is independent of asking AI for a reply.
-
-- **Clear roles.** Viewers read, commenters annotate and chat, editors can also ask AI using their own route and allowance.
-- **One conversation.** Home and Drive open the same shared record; linked local histories follow it while private divergent history stays local.
-- **Offline text survives.** Messages wait in an account-scoped outbox and retry with a stable ID. Revoked access stops retries and keeps your words.
-- **Encrypted collaboration.** Existing encryption and membership key rotation remain in force, including signed-in link holders sending human text.
-
-See the [4.30.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.30.0.md). This is a prepared candidate; publication is pending.
-
-## 4.29.0 — Sharing you control: named people receive items directly, see who opened sign-in links, risk notes and no indexing for public links; first-run tour and feedback
-
-- **Named people receive it.** Sharing by email or group puts the item in their Shared with me; with a mail provider configured they get an email (title and link only).
-- **See who opened.** Sign-in links list openers by account, each removable; public links stay anonymous.
-- **Safer public links.** Three risk notes; share pages and APIs ask search engines not to index or archive.
-- **Onboarding and feedback.** Pick language and theme on first open, a one-minute tour replayable from Settings → Help, and a feedback dialog with optional screenshot and diagnostics previewed before sending.
-- Stated boundaries: live multi-person shared conversations are not in this release (plan in docs/plans/team-collaboration.md); email needs Resend or SMTP configured on the server.
-
-See the [4.29.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.29.0.md).
-
-## 4.27.0 — Share card fixed, permanent delete in storage, global search, "anyone with the link" for encrypted content, far lower background usage and a quit that really quits
-
-Five post-install reports fixed. The two that matter most: a key-in-link scheme lets end-to-end encrypted content be opened by anyone with the link, Google-Docs style, while the server still cannot read it; idle disk writes drop from 14 MB/s to zero in the tray, and Quit no longer needs End task.
-
-- **Share card.** Desktop stylesheet order squashed the card into a 10 px line; it is now a real popover, fully visible at any width and font scale.
-- **Storage.** Every item has Delete permanently and the view has "Clean up deleted content (free N)"; the server keeps only the id and deletion time, and the quota drops at once.
-- **Global search.** Whatever section is selected, search covers the whole drive, with Ownership and Location columns; clicking opens the item where it lives.
-- **Key in link.** `#item=…&k=…` keeps the key in the browser, never on the server; link holders can view, signed-in holders can comment, nobody can edit; regenerating or stopping the link invalidates it immediately. The default stays restricted.
-- **Background and quit.** Settings → Advanced: closing to the tray pauses background work by default (running tasks and your scheduled tasks continue), the window's memory is released after 5 idle minutes; Quit ends every process tree the app started with a 10 s watchdog; a new Background activity page lists every timer, disk write and process. Root cause: every key change rewrote the whole store and the Butler heartbeat triggered full cloud syncs.
-- Stated boundaries: Windows taskkill and Task Manager figures, and real cloud network savings, are unmeasured; older clients do not recognise key links.
-
-See the [4.27.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.27.0.md).
-
-## 4.26.0 — Run control: send-now resumes, pause stops within a second, Codex state is visible, output files and links are clickable
-
-Four fixes exposed by driving Codex / OpenRouter / SenseNova from wickrunAI — all about whether you are in control of the run.
-
-- **Send now and the queue.** A question sent mid-run no longer lands inside the current answer: that answer is cut in place and marked "interrupted, progress saved", your question becomes its own turn, and the run resumes automatically in a new answer; if it cannot, it says so and offers Continue. A queue strip under the composer lets you send-now or delete each queued item.
-- **Pause really stops.** Paused shows within a second, the HTTP stream is cancelled immediately and never retried; background wrap-up is listed with elapsed time and can be force-stopped after 5 s; Codex is force-ended if it does not confirm a stop within 3 s.
-- **Visible state.** Thinking / generating / running a tool / waiting for confirmation / stopped, with time since last activity; 60 s of silence flags a possible hang.
-- **Output files and links.** Files written by clients or tools appear in an Output files card and count as code changes (large folders included); links and local paths in answers are clickable, with Copy for paths outside the working folder.
-- CI: flaky test files are rerun on their own and a pass becomes a warning.
-- Stated boundaries: nothing was run against real Codex / OpenRouter / SenseNova; Electron file-opening wiring was not clicked in a real window.
-
-See the [4.26.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.26.0.md).
-
-## 4.25.0 — Fewer jumps, fewer buttons, honest labels: in-place Claudex quick ask, an icon-first composer, one-click sharing and a drive-style Groups & Sharing
-
-Common actions now stay where you are: Claudex no longer navigates away, Share copies the link immediately, and the composer and header no longer squeeze into a row of text. It also fixes a dishonest label — local forwarders no longer count as "data stays on this computer".
-
-- **In-place Claudex quick ask.** Clicking Claudex in any composer switches it to quick mode (party A / B, include the last 3 turns, Advanced…); sending adds your question and a Claudex answer card to the conversation with live steps (both answer → cross-review → consensus), and the consensus is saved as the answer; if one party fails only that party is retried. Only "Advanced…" and "view the full run" open the Claudex page.
-- **Icon-first composer and header.** Only model, Chat/Work and Send stay as text; everything else is an icon with a tooltip that opens its full description, with a dot when changed from default; the bar folds by available space, so 100% / 115% font scale no longer squeezes. Theme, font size and 简/繁/EN move into one "Aa" button and the duplicate model chip is gone. Work turns on web search and page reading by default (each can be turned off; sensitive tools stay off).
-- **One-click sharing.** Share copies the link without leaving the page, and a card says who can open it; default access is unchanged (only you, end-to-end encrypted); ⚙ Sharing settings covers audience, roles, link access, invites and stop sharing.
-- **Drive-style Groups & Sharing.** My space / Shared with me / Groups / Recent / Handoffs; projects are folders and conversations are files, with list / grid, sorting, multi-select, context menus and a details pane; a storage view lists what uses your quota by size and marks shared-with-me items as not counting. Every existing function is kept.
-- **Local means local inference.** Only registered or detected Ollama / LM Studio, or routes you declare, show "local · data stays on this computer"; loopback forwarders show "may forward to the cloud" and are blocked in private mode; Ollama `:cloud` models count as cloud.
-- Stated boundaries: quick ask has not run against real Codex / Claude Code; drive uploads, real encrypted-account sharing and real Ollama / LM Studio / OmniRoute processes are untested; none of it has been clicked through in a real Electron window.
-
-See the [4.25.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.25.0.md).
-
-## 4.24.0 — Imported conversations really follow the remote side; select-to-collapse as implicit context management; a reading scrub bar
-
-Two fixes from feedback and two conversation-level features: Claude / ChatGPT conversations imported before 4.23 had never synced, and project import only picked up the most recent few — both are fixed, and you can now see whether sync is working; collapse and the scrub bar make long conversations manageable and navigable.
-
-- **Old imports start following.** On startup and when a conversation opens, own-account conversations imported before 4.23 get the follow flag (ones you turned off stay off); old projects get project-level follow and a rescan once a member conversation reports which Claude Project it belongs to. The banner shows "remote N / local M · synced at · next auto sync · last error", and a new **Sync diagnostics** dialog shows the last 5 attempts, the background scheduler's state and per-platform login status.
-- **Project import backfills every conversation.** Three sources are read together (the project endpoint, the project-filtered endpoint, and the whole account's conversation list paged through and filtered by project_uuid) and merged by uuid, cap 1000; the wizard lists them all, checked by default, with "remote total N"; import runs one by one, can be stopped and ends with a result list; pasting the same link again merges into the existing project without duplicates.
-- **Collapse.** Select conversation content → "Collapse": one in-place line with the core meaning (generated by the current route; never leaves the machine in private mode). From then on the collapsed part reaches the model only as "[collapsed: summary]" — normal sends, desktop handoffs, Claudex material, Butler reads — while the original stays and can be expanded or uncollapsed any time. A first-use dialog explains the effect; a counter above the composer shows "N collapsed · ~X tokens saved".
-- **Reading scrub bar.** Hover the conversation's left edge for a vertical track: one tick per question plus headings / version lines / long code blocks / collapsed ranges inside long answers; hover to preview, press-and-drag to scrub stage by stage with the conversation scrolling along, click to jump, keyboard supported; can be turned off in Settings.
-- Stated boundaries: the account-wide conversation list's fields and paging, and the background scheduler running in real Electron, are unverified on a live account / machine; diagnostics and the Sync diagnostics dialog report what actually happened.
-
-See the [4.24.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.24.0.md).
-
-## 4.23.0 — One-click local models with a private mode; imported Claude / ChatGPT conversations keep following
-
-Both features put the "connection" to real use: open models running on this machine join wickrunAI with zero configuration and private data never leaves it; conversations imported from claude.ai / ChatGPT stop being one-off snapshots — keep chatting over there and the record and rendering appear here.
-
-- **Local models, one click.** A new "Local models" card under Local AI detects Ollama (11434) and LM Studio (1234) on this machine, lists installed models, and registers them as a route (no address, no key); models land in the delegation catalog's **economy** tier; route and model pickers show a "local · data stays on this computer" badge.
-- **Private mode.** A 🔒 chip on the composer, and a per-project "new conversations private by default": only local routes are allowed; cloud routes, Claude/ChatGPT Desktop handoffs, Claude Code/Codex cloud brains and cloud Claudex parties are blocked before sending with a one-click "use a local route" way out; secondary-model delegation picks from local catalog entries only. Scheduled tasks in private projects are held to the same rule.
-- **Follow sync.** Conversations imported from your own claude.ai account, ChatGPT private chats (new `chatgpt.com/c/…` login-window import) and imported-project conversations follow by default: on open, on demand and every 5 minutes in the background, the login-window channel re-reads the remote thread and **appends only messages you don't have yet**, placed on the same timeline by remote time with a "from Claude / ChatGPT" mark; messages you write in wickrunAI are never reordered or overwritten; remote edits and deletions are flagged, never rolled back; failures back off exponentially and an expired login gets a "sign in again" path in the banner.
-- **Project follow.** wickrunAI projects imported from a Claude Project rescan the remote conversation list and offer new conversations for one-click inclusion.
-- **Handoff hint.** When a Claude / ChatGPT Desktop handoff ends, paste that conversation's link to follow it; a pasted thread that overlaps an existing local one is offered as a merge rather than a duplicate.
-- Stated boundaries: writing back to claude.ai / ChatGPT is not possible (no API on either side); the ChatGPT private-chat endpoints are unverified on a live account and fall back to the page with diagnostics; "stays on this computer" covers wickrunAI's own model requests.
-
-See the [4.23.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.23.0.md).
-
-## 4.22.0 — Project sync folder: one local truth for all three sides; Claude model & thinking directly selectable; Local AI panel redesign; cheaper releases
-
-Continuing the "unbroken desktop Claude / ChatGPT pipeline, lower switching cost" goal: a wickrunAI project can now sync to a local folder that Claude Code, Codex, Claude Desktop and ChatGPT Desktop all read; Claude's model and thinking effort are finally directly selectable; the Local AI panel shrinks from three paragraphs to one row; and GitHub Actions minutes stop burning.
-
-- **Project sync folder (two-way).** Each synced project maps to `Documents/wickrunAI Projects/<project>/`: `PROJECT.md` rules, `docs/`, `memory.md`, `journal/` (what each call did) and generated `CLAUDE.md` / `AGENTS.md`. Claude Code gets it as an extra working directory; Codex receives the path and latest journal; Claude Desktop / ChatGPT Desktop read and append through `wickrun_project_read` / `wickrun_project_journal`. New docs, memory candidates and journal entries flow back into wickrunAI; atomic writes, content-hash loop guard, nothing ever deleted.
-- **Claude model & thinking, directly selectable.** "Claude · Subscription (Claude Code engine)" becomes the primary Claude client in conversations: model (alias or exact ID) and five effort levels pick from dropdowns and take effect immediately (`--model` / `--effort`), no app switching. Claude Desktop / ChatGPT Desktop requests split into two readable selectors, "Model: Opus ▾" and "Thinking: default ▾", showing the current value; still by convention, one tooltip says so.
-- **Font size truly applies to the conversation page.** Measured root cause: 78 of 115 text elements on the page (question heading, code blocks, handoff cards, buttons) were fixed pixels — nearly everything a single-agent chat shows. 123 rules now follow the setting, with a real-render regression test.
-- **Local AI panel redesign.** One row per app: name, status dot, one primary button; secondary actions behind ⋯, explanations collapsed into "How it works"; ChatGPT settings back in the ChatGPT panel, the shared "Secondary model delegation" as its own section; readable on narrow screens.
-- **Cheaper releases.** Private-repo Actions are metered (macOS at 10×): runners switch to self-hosted via repository variables (`docs/SELF_HOSTED_RUNNER.md` has the setup), PR re-pushes cancel the previous check, docs-only changes skip CI, and macOS no longer re-runs the test suite during a release.
-
-See the [4.22.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.22.0.md).
-
-## 4.21.0 — The desktop pipeline stops breaking: long chats auto-compress with on-demand history, ChatGPT Desktop as a conversation client; one-click Claudex quick ask
-
-One goal: calling desktop Claude and ChatGPT from wickrunAI must flow end to end without error interruptions. The 24000-character handoff error is gone, ChatGPT Desktop is a first-class conversation client, and Claudex gains a zero-typing basic flow.
-
-- **Long conversations never stop on length.** Oversized handoffs compress automatically (your requests and recent turns kept, omissions noted); the full history stays local and the other side reads it in parts via the new `wickrun_read_task_history` connector tool. One notice, no pause, no confirmation.
-- **ChatGPT Desktop conversation client.** Hand conversations to ChatGPT Desktop directly: the same auto-claim channel, the same model/thinking requests with report checking, the same free delegation and budgets. ChatGPT cannot prefill instructions, so the first task instruction is pasted into a connector-enabled chat; setup guidance is in Settings.
-- **The request picker is actually pickable.** Model suggestions are clickable rows (click to select, click again to clear), the bottom-bar chip no longer truncates, and the popover opens upward.
-- **Anti-interruption sweep.** Continuing after a pause re-hands off automatically; unreadable settings, a stale delegation catalog or oversized images degrade gracefully with a notice; status reads retry 5 times before pausing; the time limit only counts inactivity, so long tasks reporting progress are not cut off.
-- **Claudex quick ask.** Type a question and click Claudex: both sides answer independently → review each other → a consensus with disagreements listed as they are. One click to run, one click to send the conclusion back; the full panel remains for advanced runs.
-- **Project imports recover older conversations.** The conversation list is now fetched page by page (the real paging format is unverified on a live account; diagnostics state how much was read).
-- **Misc.** The font-size setting applies to Claudex screens; the “imported from…” banner is closable (the source stays in the ⋯ menu).
-
-See the [4.21.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.21.0.md).
-
-## 4.20.0 — Desktop AI as smooth as native: auto-claim, model & thinking requests, free delegation; Claudex mid-course; Personal/Group home filter
-
-This release is built around one acceptance bar: calling your desktop subscription models from wickrunAI must feel no worse than using the native app. Claudex also no longer has to start from scratch, and the home page separates personal chats from group discussions at a glance.
-
-- **Auto-claimed tasks.** With the Claude Desktop connector online, dispatch hands the claim instruction over automatically — no more copy-paste; offline still opens the deep link. Restarts never silently re-claim, and one session handles one task at a time.
-- **Model & thinking requests.** Pick a model (editable suggestion list) and extended-thinking on/off when calling Claude Desktop; the request goes into the task, the claiming Claude must report its actual model and thinking state in its first progress update, and mismatches are shown as "requested / reported" with a retry path. The official app has no external control API — this is control by convention, stated honestly.
-- **Free delegation of secondary models.** Add route models to a delegation catalog with economy/standard/flagship tiers, then dispatch with "free delegation + budget": the desktop AI routes retrieval and drafts to economy tiers, keeps flagships for key reasoning, must review every sub-result itself, and must report and ask before exceeding scope or budget; every delegated call records model, purpose and usage in the task detail. Butler stays out unless you flip its dedicated switch.
-- **Thinking effort in group chats and boards.** "Let a model reply" gains the five-level effort scale next to the model picker (same mapping as single chats); replies are labeled with the effort used, and old records render as before.
-- **Claudex everywhere, mid-course.** The main chat, project conversations and shared group chats all get a Claudex entry: the current transcript plus project instructions, docs and memory are assembled into identical material for both parties (truncation always noted), each party picks its own client, model and effort; implement mode can rotate the implementer each round — the two sides take turns writing and checking, a writer never reviews its own round, and write access is still granted by you round by round.
-- **Personal/Group home filter.** All / Personal / Group capsules: Personal = no other participants; Group = shared chats at least two wickrunAI accounts took part in, listed right on the home page without copying to your workspace first — one click opens the chat.
-- **Cleaner imports (4.19.2 folded in).** claude.ai's "This block is not supported…" placeholders and empty code fences in imported conversations: real block types are recovered as `[tool call: x]` notes where possible, the rest is scrubbed with a one-line count note; re-importing the same link updates in place.
-
-See the [4.20.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.20.0.md).
-
-## 4.19.0 — Import your own Claude chats and Claude Projects; imports you can actually reach later
-
-Content with no share entry on claude.ai now comes into wickrunAI too — and an import is no longer a stranded conversation: it lands in the Project layer, where every conversation and every route (Claude Code included) can read it.
-
-- **Two new links.** Paste `claude.ai/chat/…` (your own conversation, including ones inside a Claude Project) or `claude.ai/project/…` (a Claude Project page): the desktop app signs you in once in a popup and reads it, data API first, page fallback. The web and Android cannot sign in as you and still point you to the desktop app.
-- **Pick a destination after pasting.** "New conversation" or "Import into a project…"; a project destination also transcribes the chat into a project doc 「导入对话：title」 plus a memory pointer — exactly the layer every model call carries, so you keep working without re-pasting anything.
-- **A Claude Project becomes a wickrunAI project in one pass.** Description → project instructions, knowledge files → project docs, conversations imported by checkbox with progress, stop, and per-item fault tolerance; a same-named project merges by default, and re-importing refreshes instead of duplicating.
-- **Old imports can catch up.** "Save as project doc" lives on the import banner, the conversation ⋯ menu and the shared space.
-- Stated plainly: claude.ai's own Project memory has no export surface and cannot be read; the internal endpoints are unverified against real pages — if a read fails, send back the diagnostic and we adapt, as in 4.16–4.18.
-
-See the [4.19.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.19.0.md).
-
-## 4.18.0 — A focused shared conversation; a theme / font size / language capsule; a collapsible sidebar header; whole Claude Code sessions
-
-A shared conversation now shows only the thread and one composer, with discussion, access and history opened on demand; the item list collapses. The same quick capsule for theme, font size and language sits in chat, the shared space and the Agent team. The sidebar header folds away to show more conversations.
-
-- **Focused conversation.** The shared conversation page reads like a messenger: title row, thread, one composer; extras open on demand.
-- **Quick capsule.** Light / dark, A− / A+ font size, 简 / 繁 / EN; the full options stay in Settings.
-- **Sidebar header ⌃.** Folds the project picker, workspace switch, Butler card and navigation; remembered in Settings.
-- **Copy to my workspace.** A shared conversation becomes a plain conversation in "Recent", with an "Open" button in the notice; no extra project is created.
-- **Claude Code sessions.** The session page is a virtualized list; the import now scrolls through it screen by screen and extends its deadline while reading.
-
-See the [4.18.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.18.0.md).
-
-## 4.17.0 — Check roles before saving an import; the composer's model picker in the shared thread; an action menu on shared items
-
-Pages without role markers, such as Codex tasks, came in with some turns reversed; an import whose roles were inferred now opens a review panel first. The shared thread's "send as" is no longer a dropdown with hundreds of entries but the same picker as the composer. Every shared item has a ⋯ menu.
-
-- **Roles are checked before saving.** An import whose roles were inferred from the order opens "Check the roles, then save": each turn can be set to user / assistant, "Swap all" flips them, and nothing is saved until confirmed; roles cannot change once saved.
-- **The composer's picker.** "Chat, no AI" or "Let a model reply"; the latter uses the same credential → model picker as the composer (searchable, chat models only by default), including the official route once it is registered.
-- **Actions on shared items.** Copy to my workspace, copy into a project…, save as file (Markdown or wickrunAI JSON), access, delete (owner, with confirmation).
-- **Claude Code session pages.** The diagnosis now names the address, the whole page's text size, iframe count and the first few words; after sign-in the page gets 90 seconds; same-origin iframes are read too. Real error text is still needed to adapt to the page.
-
-See the [4.17.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.17.0.md).
-
-## 4.16.0 — Claude, ChatGPT and Codex links go into the shared space; private pages ask you to sign in
-
-Paste a Claude or ChatGPT / Codex link into **Groups & sharing → Open sharing link** and the conversation is read back and saved as a shared conversation in the current space, ready for comments, annotations and AI replies. Links that are not public pages, such as a Claude Code session (`claude.ai/code/session_…`), open a sign-in window on the desktop once; the sign-in is kept for later links.
-
-- **Shared space accepts share links.** `claude.ai/share/…`, `chatgpt.com/share/…`, `chatgpt.com/s/…` (conversation and Codex task short links) and `claude.ai/code/session_…`; the composer accepts the same set.
-- **Sign in once for private pages.** When a page redirects to a login, the desktop shows the import window so you can sign in; the import then returns to the link and reads it. The web and Android lines say plainly that such links need the desktop.
-- **A diagnosis instead of a bare timeout.** When a page loads but no message block is recognised, the error names the page and what it did find, so the structure can be reported and supported.
-- Not verified against live pages yet: Codex task share pages and Claude Code session pages (this environment cannot reach them); please report what the error says.
-
-See the [4.16.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.16.0.md).
-
-## 4.15.0 — Instant updates while the app is open; one document editor with tables, charts and annotations
-
-Shared items and cloud sync now update the moment something changes, and every document surface uses the same editor.
-
-- **Live updates.** The server pushes "something changed" over a server-sent event channel; shared conversations, comments, hand-offs and boards refresh at once, and other devices sync right away instead of up to a minute later. Polling stays only as a 30-second fallback.
-- **One editor.** Markdown artifacts, shared text files and project docs share a block editor: tables, task lists, images, code and echarts charts (a small JSON block the model can read and write). The composer still recognises Markdown as before.
-- **Annotate for the model.** Select text, write what should change, and send all annotations to the model in one request; in shared files an annotation becomes a comment anchored to the text.
-- **Co-editing without losing work.** When someone else saves a shared text file while you are editing, their blocks merge into your draft; only the same block changed by both is marked as a conflict. Merging happens on your device before the end-to-end encrypted upload.
-
-See the [4.15.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.15.0.md).
-
-## 4.14.0 — Open Claude and ChatGPT / Codex share links; fewer dead ends in Agent teams
-
-Paste a share link from Claude or ChatGPT (conversation or Codex task) into the composer and it opens as a local conversation you can continue with your own model. Agent teams lose three places where a first-time user used to get stuck.
-
-- **Share links open as conversations.** `claude.ai/share/…`, `chatgpt.com/share/…` and `chatgpt.com/s/…` are read back with their user and assistant turns, titled after the share, with the original link kept at the top. The desktop reads the page in a hidden browser window so it passes the sites' bot checks; the web and Android lines ask the server and say so when the site refuses a server. This release has not yet been verified against real pages; please report what fails.
-- **Acceptance is optional.** A delivery task saved without "what does good look like" gets a plain default and is still accepted by you.
-- **An assigned owner works with quick setup.** The owner becomes the executor; only the discussion or review partner is added.
-- **Running saves the version.** A flow without a saved version runs from its draft; the designer saves a new version when the draft moved on.
-
-See the [4.14.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.14.0.md).
-
-## 4.13.0 — Long tasks keep going; bookkeeping stops costing rounds
-
-A task that writes a quiz page from four textbook chapters used to be cut off after 60 minutes with "stage time budget reached" and a stage summary of 0 of 4 conditions, while the model had spent its first rounds filling in milestone forms. This release treats stage budgets as checkpoints and makes the bookkeeping tools forgiving, so the rounds go to the task itself.
-
-- **Stage budgets are checkpoints, not stops.** When the minutes, tokens or tool rounds of a stage run out, the executor checks whether the stage did real work (files written, commands run, pages read). If it did, the next stage opens on its own and the task continues; only a stage with no new real operation pauses, with the reason spelled out. Streaming answers and pending tool calls are never cut off. Team members, ad-hoc subagents and the Butler keep their budgets as hard limits.
-- **Bookkeeping is forgiving.** Missing evidence on a milestone, a completion note or a model review is filled in by the executor from its own record of successful steps; a milestone without a linked check can complete; a milestone whose check has not passed is quietly marked for verification instead of rejected. What still stops a run: claiming completion with no operation at all, answering with only a plan, skipping a requested test or push, or a registered program check that fails.
-- **The stage summary shows real work.** It now says how many operations completed and how many files were written, across how many automatically opened stages, instead of only the checklist count.
-
-See the [4.13.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.13.0.md).
-
-## 4.12.0 — Android rebuilt on the desktop code
-
-The Android app had been a separate copy of the code since around 4.0, so most of what shipped after 4.4 never reached phones. From this release the Android line is the desktop code plus a thin mobile layer, so phones carry the same features and fixes as desktop and web.
-
-- **Same code as desktop.** The Android line now starts from the desktop source and adds back only what is mobile: account-scoped storage, the system keystore, the phone file picker, the phone layout and the phone-side Butler collector. The native Android and iOS projects are unchanged.
-- **What phones gain.** Agent-team tasks synced from your computer with acceptance on the phone, team claims seen both ways, Claudex remote view and decisions, the cloud file library, the credit panel, smart search, result versions and human acceptance, 4.10.0's parallel chats and scanned-PDF import, and 4.11.0's offline previews and approval rules. Work that needs the computer's own tools still says it runs on the desktop, as on the web.
-- **Butler control always checks the account.** A control call can no longer skip the signed-in account and session check, on every platform.
-- **License texts inside the app.** The Android build ships the license, the notice and the full third-party license text.
-
-See the [4.12.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.12.0.md).
-
-## 4.11.0 — Previews stay offline; team claims seen both ways; web and Android ask like the desktop
-
-This update closes gaps listed as unfinished in earlier release notes. A generated HTML preview can no longer reach the network, two computers running the same team project now see each other's running task, and the web and Android apps decide which actions to ask about with the same rules as the desktop.
-
-- **Previews stay offline.** Model-generated HTML and SVG previews run with no sandbox permissions and a content policy that allows only embedded resources, so a remote image address can no longer carry what the model has read out of the app. The desktop also blocks the preview frame from navigating anywhere.
-- **Team claims both ways.** When the same project is restored on two computers, the one that does not host it now publishes its running tasks too, so neither starts a task the other is running, and phones show which computer is running it.
-- **Web and Android ask like the desktop.** "Auto-approve edits" lets only file edits and clicks through; the first visit to a new website after reading local files asks first; writes to files that git, npm or CI run automatically always ask. The web's own team store now also waits for the human acceptance of a predecessor task.
-- **Butler limits keep the newest records.** After a sync, the caps on goals, briefs, skills, jobs and feedback drop the oldest entries instead of whichever the server listed last, and the account window lists which items conflict, not only how many.
-- **Android catches up.** The Android line carries 4.10.0's parallel chats, scanned-PDF import and denser conversation, plus this release's fixes.
-
-See the [4.11.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.11.0.md).
-
-## 4.10.0 — Parallel chats stop waiting on each other; any PDF can be read
-
-Three things a person hit daily. A chat no longer queues behind another chat that happens to work in the same folder: each runs on its own route and model, and only the moment of writing a file takes turns. A PDF is never refused for lacking a text layer: scanned and slide-image PDFs come in as page images that a vision model reads directly. And the conversation shows more per screen.
-
-- **Chats run in parallel in the same folder.** The run-wide workspace lock is gone, along with "waiting for … to release the workspace". File-writing tool calls (write, edit, delete, write document) on overlapping folders take turns one call at a time across chats; reading, thinking, commands and other tools stay parallel.
-- **Every PDF comes in.** Extractable text is attached as before; pages without a text layer (up to 20) are rendered to images and attached, in the desktop picker, drag and drop, paste, the web and the phone. Rendering is an enhancement: if it fails, the text and the local path still arrive.
-- **Optional marker conversion.** `read_document` uses [marker](https://github.com/datalab-to/marker) for layout analysis and OCR when the built-in extraction finds no text and marker is installed on this computer (`pip install marker-pdf`). It is never bundled, never downloaded, and never blocks anything: missing, failed or timed-out runs fall back to the built-in result.
-- **A denser conversation.** Answer text and spacing are tighter, the input box is one line with smaller controls, and stream/effort sit in the bottom bar instead of a row of their own.
-
-See the [4.10.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.10.0.md).
-
-## 4.9.0 — Team tasks across devices and accounts; uploads signed with type and size
-
-This update closes the gap left by 4.8.0: Agent-team tasks are now visible, stoppable and acceptable from your other devices, and a team project can be published to a shared board so someone on another account can complete the independent acceptance. Upload links now carry the file's type and size in the signature, so the storage bucket itself refuses a mismatched upload.
-
-- **Your other devices.** Project summaries, tasks, result versions, acceptance records and claims sync end-to-end encrypted to your phone and the web; there you can accept, return, start or stop, and the executing computer applies each decision once, in order, rejecting an acceptance whose version has changed. A task running on another computer is never started twice.
-- **Acceptance across accounts.** A team project can be published, by hand, to a shared board: members see tasks and result versions under Groups & sharing and accept there; the server enforces by account that the producer cannot accept their own version, that a rejection needs a reason, and that versions are append-only; the executing computer pulls those acceptances back. Before publishing you are told what becomes plaintext on the server (titles, summaries, digests, names); files, run transcripts and materials are never uploaded.
-- **Dependencies wait for a person.** In team projects a dependent task starts only after its predecessor's current version has been accepted by a person (off by default for personal projects; a project setting).
-- **Signed uploads.** Single-PUT upload links sign Content-Type and Content-Length, so the bucket refuses an upload that differs from what was declared; older clients sign length only and keep working. The real R2 acceptance (5 GiB transfer, CORS, multipart complete and abort) passed in full and the script was updated.
-- **The installers repository's README** now syncs the product story from this page on every release.
-
-See the [4.9.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.9.0.md).
-
-## 4.8.0 — Claudex implement-and-check, result versions and human acceptance
-
-Claudex moves from read-only review to "implement in an isolated copy, have the other party check it independently, you accept and merge", and team-task results become digested versions that human acceptance is bound to.
-
-- **Implement and check independently.** Pick an accepted plan version and a Git project, confirm the write grant, and the coordinator creates an isolated worktree from the current commit. The implementer can write only there: Codex runs in a sandbox limited to that directory with shell and network off; Claude Code gets only Read / Grep / Glob / Edit / Write scoped to the directory (no Bash, which cannot be confined). Any write outside refuses the whole request and is recorded. The checker reads the full change in a new session. The fingerprint covers the diff and untracked files; you accept a fingerprint, and any later change voids it. Merging into your checkout happens only after acceptance and on a clean tree; a patch can be copied instead. A second start never runs twice; stopping goes through the execution registry.
-- **Result versions and human acceptance.** Every delivery is recorded as a digested version; acceptance is bound to a version and is void once the result changes, sending the task back to "awaiting acceptance". AI verdicts remain references; only a person's acceptance completes a task, and the overview counts only those. Personal projects: the owner accepts; team projects: the acceptor must be a different signed-in account from whoever started the run.
-- **Known limit.** Two-person acceptance in a team project can only be completed within the same local data today: team tasks are not yet synced across devices or accounts, so the second person does not see the task on their own device. The data model is ready; the sync is the next step.
-
-See the [4.8.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.8.0.md).
-
-## 4.7.0 — Official hosted route and a billing interface (no collection), Claudex hosted mode
-
-This update adds an optional official hosted route and a billing interface that keeps accounts but collects no money. It is one more route you may pick, never selected for you; the Butler never buys credits or changes plans.
-
-- **Official route.** Once signed in, add "Official route" under API credentials: no key to paste, models come from the server catalog with context length and credit prices. Requests go through the server's OpenAI-compatible endpoint; upstream keys stay on the server; each request reserves credits first, settles on the usage the upstream reports, and releases on failure. When credits run short you are told what is left and what the call needs, with two ways out (another route, or the next period) and no retry loop.
-- **Credits page.** Settings gains "Credits": plan, remaining / reserved / used this period, period end and the last 50 ledger rows (purpose, model). When the server has no payment set up it says so in one line and shows no payment entry.
-- **Claudex hosted mode.** Either party can use an official-route model, shown as "hosted credits"; every round reserves before it runs, and a round the budget cannot cover does not start.
-- **Server.** A provider adapter (OpenRouter first, every call with `require_parameters` so silently ignored parameters are refused; another provider is one adapter plus `HOSTED_PROVIDER`); three ledgers (upstream cost, user credits, collections); plan fields and entitlements for 2.99 / 4.99 / 19.99 USD per month; payment callbacks idempotent by event id. Not in this version: real collection, enterprise seats, annual plans.
-
-See the [4.7.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.7.0.md).
-
-## 4.6.0 — Execution registry, device receipts, and a capability notice before upload
-
-This update finishes the remaining phase-one reliability work: stopping no longer relies on guesswork, every execution is registered and its exit recorded; each device reports stop progress with signed receipts; and before a file is uploaded you are told whether it can be stored, previewed, and handed to the current model.
-
-- **Every execution is registered.** Model requests, tools, local clients (Codex, Claude Code, Kimi, Grok), Work, subagents, hooks and collectors persist their ownership (account, device, stop epoch) before they start; a stop closes every entry point first, then waits for registered executions to actually exit and records how each one ended. Sending a kill is not an exit; executions left over from before a restart are marked "unknown" and listed in the Butler panel and the activity log. Late collectors and hooks cannot start after a stop.
-- **Device receipts.** Each executing computer signs receipts with a device key independent of the end-to-end encryption identity: received → dispatch banned → ending → confirmed exited. The server verifies signatures, rejects replays, forgeries and a stale resume overriding a newer pause, and aggregates per device; offline, outdated and restart-leftover devices show as "unknown". The interface says "stopped across devices" only when the server enables it and every device has confirmed.
-- **Capability notice before upload.** After picking a file you see four lines: store, preview, edit, hand to the current model, with limits taken from the server's real response; an older server without those fields shows "unknown" and asks the admin to update instead of guessing.
-- **Real cloud acceptance tooling.** `scripts/r2-acceptance.mjs` runs only against an isolated bucket whose name contains `-acceptance` or `-test`, covering conditional signing, URLs after multipart completion and abort, CORS and an optional real 5 GiB transfer, and writes a Markdown report; the real-device gap list lives in `docs/acceptance/real-device-gaps.md`.
-
-See the [4.6.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.6.0.md).
-
-## 4.5.0 — Claudex co-refinement, role rotation, API-route parties and cross-device decisions
-
-Claudex can now start from a goal instead of a finished plan; either party can be a local Codex / Claude Code subscription or one of your own API routes; and your phone and the web can follow a run and decide.
-
-- **Co-refine mode.** You give the goal and materials; the author drafts version 1 and the reviewer checks it item by item. Every later round rotates: last round's reviewer revises, last round's author reviews. The side that wrote a version never reviews it, enforced in code. An unchanged plan stops the run as "no new evidence".
-- **An API route can be a party.** Choose "API route" from your own credentials and model list; keys never leave the local keystore. The vendor family is judged from the actual model, and two parties from the same family are refused. Each round records the requested model, the model the upstream actually returned, and where the usage figures came from (API, client report, or unknown).
-- **A failing party never degrades the run to one model.** Only with "allow same-model failover" ticked does it retry once on another route of the same family, recording the actual provider; otherwise it stops and says which side failed and how to fix it.
-- **See, stop and decide from your phone or the web.** Run summaries (version digests, finding counts, pending decisions) sync end-to-end encrypted; from another device you can stop a run, return it with a reason, or accept a version. Acceptance is bound to that version's digest, so a desktop that sees the plan has changed rejects it and tells you. Execution stays on the desktop.
-
-A same-budget "single model vs Claudex" comparison is in `scripts/run-team-strategy-comparison.cjs`. See the [4.5.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.5.0.md).
-
-## 4.4.0 — Today's Butler on its own, feedback that changes the inbox, Claudex up front
-
-This update separates Today's Butler from the Agent team, makes your feedback on each brief item change what the Butler does next, and puts Claudex where you can see it.
-
-- **Today's Butler is a third top-level entry.** The sidebar switch is now Chat / Agent team / Today's Butler, and the Butler opens as a full page instead of a dialog. The chat sidebar keeps a collapsible summary card: whether today's brief exists and how many suggestions await your decision. The Agent team's intake page, formerly called "Butler", is now "Start a task", and every navigation item has its own icon.
-- **Feedback changes the inbox.** Mark a brief item "wrong" and say why, and the Butler treats it as a correction of that need: the inbox suggestion shows your own words and "waiting for the Butler to rewrite", with "Do it" disabled; once the need is rewritten or split from your words, old suggestions are replaced by new ones. "Not my need" withdraws the need and its suggestions.
-- **Feedback reaches the next brief.** Everything you said since the previous brief goes into the next morning or evening brief, which acknowledges each correction up front and stops re-proposing the old framing. Needs you already answered do not reappear unless there is new progress; unanswered ones are marked "reminder". Every brief item can be collapsed.
-- **Claudex up front.** "Claudex · two-model review" is second in the Agent team navigation; a card at the top of the overview starts a review in one click when Codex and Claude Code are both signed in, and says exactly which step is missing otherwise. The chat sidebar and the web "About wickrunAI" page link to it too.
-
-The Cloud files tab in Settings now explains its state and the next step instead of showing nothing. See the [4.4.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.4.0.md).
-
-## 4.3.0 — A Butler you can correct, and smart search
-
-This update makes Today's Butler easier to correct and better at seeing what you actually need, and lets in-app search understand questions like "the feature we talked about yesterday".
-
-- **Corrections always save.** Each goal has one box, "Correct or add to this need". Saving needs no model budget, takes effect at once and is still there when you reopen; the next analysis rewrites the goal from your own words and splits it if you named several needs. A cloud sync could previously overwrite a correction you had just saved; that is fixed.
-- **Needs reasoned from first principles.** The Butler asks what result you are after before looking at the object you touched. Looking at one fund becomes "find investment for the project", and research covers comparable options in your city, province, country and North America.
-- **Urgent and important, told apart.** Every goal shows urgency and importance, and the inbox and goal list are ordered by them. You can set them by hand; the Butler learns from your settings and from how quickly you accept or set aside its suggestions.
-- **Smart search.** Press Enter in the sidebar search box, or click Smart search. "Yesterday", "last week" and "last 3 days" are read in local time, and asked before 5 a.m. "yesterday" also covers the day before. The model chosen for the Butler turns the topic into the words your records may use and ranks the most relevant conversations, workflow runs and task discussions. These calls do not count toward the Butler's daily budget; with no model chosen, search still matches the words typed and the time.
-
-The web app gains About wickrunAI and About the author pages. See the [4.3.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.3.0.md).
-
-## 4.2.0 — Two-model review
-
-This update adds Two-model review to the collaboration space: two models from different vendors take turns reviewing and revising an important plan, and you decide which version to accept. The daily Butler never starts it on its own.
-
-- **One reviews, one revises.** Write the goal, acceptance criteria and plan, then pick the author and the reviewer (Codex or Claude Code signed in on this computer). The reviewer raises findings; the author accepts, rebuts, or hands each one to you, and each revision is saved as a new version.
-- **Every point needs a source.** Quotes must appear word for word in the plan or material, or they count only as assumptions. A verdict that is not about the current version is discarded.
-- **No endless debate.** It stops for you on approval, a blocker, a decision only you can make, a round with nothing new, or when rounds or time run out. Two models from the same vendor cannot start a review.
-- **Your acceptance is tied to one version.** If the plan changes again, the earlier acceptance no longer counts. Both sides are read-only, never edit your files, and never switch a subscription to a paid API.
-
-This version covers plan review only; implementation with independent inspection comes later. See the [4.2.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.2.0.md).
-
-## 4.1.0 — Project spaces and a Butler that asks first
-
-This update turns the collaboration space into project spaces where people and AI move a goal forward together, makes Today's Butler ask for consent and suggest quietly, and fixes the repeated blank window on machines with a lot of data.
-
-- **Project spaces.** Write a goal, break it into tasks, and give each task an assignee, a reviewer, and a due date. AI can judge a delivery against the acceptance criteria, but a task is done only when its assignee confirms and a different person approves. Every verdict records who gave it, when, and with which model.
-- **Consent before the Butler starts.** A notice says what it uses, where that goes, and what it never does; until you agree, nothing is collected, analyzed, or run. "What Butler remembers" lets you delete items one by one, clear everything, download your data, or withdraw consent, and deletions sync to all your devices.
-- **A suggestions inbox.** The Butler no longer starts work on its own by default. It puts what it would do in an inbox and starts only when you choose "Do it"; accepted work uses file tools only, in an isolated folder.
-- **AI-written briefs and a first-open greeting.** Your chosen model writes the morning and evening briefs and a short greeting. The first time you open the app each day, a dismissible card appears at the top instead of a dialog. The Butler can also learn your usage habits on the device, keeping only a one-sentence summary, and you can turn this off.
-- **No more repeated blank windows.** Full cloud syncs run only when something changed, Butler sync reads a small dedicated record, and unchanged records are not rewritten. On the affected machine, the window went from crashing about every 4 minutes to running for over an hour without a crash, and a question sent during a sync no longer disappears under an older copy.
-
-Payments, transfers, trades, and negotiation stay fully blocked, and project boards are not end-to-end encrypted. Sidebar titles now use the full row and show their actions on hover. See the [4.1.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.1.0.md).
-
-## 4.0.0 — Cross-account collaboration
-
-This major update adds a shared workspace for people using different wickrunAI accounts. Share files and folders, join the same conversation, maintain project instructions together, or jointly edit a workflow and inspect its published execution history.
-
-- **Choose who can do what.** Grant viewer, commenter, or editor access through a link, verified email invitations, or personal and company spaces. Children inherit their parent’s access. Guests can view public links; guest comments require the owner to enable them. Changes, versions, and messages retain their author and time.
-- **Work together with your own models.** Human messages appear on the left and AI replies on the right with the generating account and model. Private and shared annotations stay outside AI requests and memory. Concurrent messages are preserved; conflicting edits keep your draft.
-- **Transfer files up to 100 MB.** Shared uploads and downloads use bounded chunks and store file versions by reference. Document attachments also accept 100 MB; large extracted text shows a clearly marked preview instead of putting the whole file into a model request. Image and media inputs retain their separate model limits.
-- **Change simple settings beside your message.** Click native AI effort levels and the Streaming / Non-streaming control directly in the composer. Adjust mapping opens the current conversation’s thinking settings. The right panel groups response and thinking options together.
-- **Connect independent teams and Agents.** Both sides accept a connection before handing over a goal, summary, and explicitly selected text files. Each side keeps its own workflow, tools, and model settings. Received work opens as a draft; copied Agents and routines start disabled.
-- **Keep personal data personal.** Personal Butler goals, memory, signals, tasks, logs, and derived conversations cannot enter sharing. Company administrators only manage their shared space. Sharing excludes credentials and tool permissions.
-- **Keep this computer’s history when signing in.** The first desktop account continues the existing local conversations, project memory, model setup, and workflows. Later accounts remain isolated. The empty-workspace first-login issue in 3.0.1 recovers when the original data remains and the new local account has no work to overwrite.
-
-Personal and company spaces are currently free, with individual monthly and company seat billing reserved for future use. Google sign-in is available; the common wickrunAI identity model supports other providers, while Apple setup is still pending. This release requires matching Windows, macOS, Linux, and Android preview packages. See [sharing and handoffs](https://github.com/lifishard/wickrunAI/blob/main/docs/SHARING_COLLABORATION.md) and the [4.0.0 release notes](https://github.com/lifishard/wickrunAI/blob/main/docs/releases/v4.0.0.md).
-
-**Android 3.0.0 migration:** its temporary signing key was not retained, so 4.0.0 cannot install over that preview. Back up the data you need before uninstalling and reinstalling; uninstalling deletes data that has not been backed up. The application ID remains the same. Future releases require the fixed 4.0.0 signing certificate.
-
-**When a route dies mid-task, the task does not.** This is the notice you get, verbatim, and the run continues from where it stopped:
-
-```
-This account is out of quota. Handed to glm-5.2 from your failover order;
-the saved progress carries over.
-
-This account is out of quota. Handed to kimi-k3 from your failover order;
-the saved progress carries over.
-```
-
-Three routes, two handovers, one task, nobody watching. The order is a list **you** wrote — the program walks it, it does not decide for you which of your routes is the cheap one. [How it decides](https://github.com/lifishard/wickrunAI/blob/main/docs/llm-failover.md).
-
-## 60 seconds to your first answer
-
-1. **Download.** Open the [download chooser](https://wickrunai.com/download), select your system and configuration, and install. No account, no sign-up.
-2. **Add one key.** Settings → API credentials → paste a Base URL and an API key, press **Test connection**. Pick the OpenRouter preset if you want a free route to start with. The key is encrypted into your OS keystore — Windows DPAPI, macOS Keychain, Linux libsecret.
-3. **Send a message.** Choose a model next to the composer and ask something. That is the whole setup.
-
-Then, when you want more: add a second key and put both routes in the failover list, add a working directory for file tools, or configure a search service. See [Configuration](https://github.com/lifishard/wickrunAI/blob/main/docs/CONFIGURATION.md).
-
-How wickrunAI compares with other bring-your-own-key clients: [docs/BYOK_COMPARISON.md](https://github.com/lifishard/wickrunAI/blob/main/docs/BYOK_COMPARISON.md). Full documentation index: **[docs/README.md](https://github.com/lifishard/wickrunAI/blob/main/docs/README.md)**.
-
-## What it is
-
-wickrunAI is one workspace that orchestrates all your AI, on Windows, macOS, Linux, the web and Android. Connect any service that uses the OpenAI-compatible API and use it to research topics, work through documents, read and write files, drive Chrome, or call the Claude Code installed on your machine.
-
-On a long task you can have one model gather the material, pause, then hand the work to another model to organize or check it. wickrunAI keeps your requirements, the run journal, and the original evidence. Press Continue and the new model resumes from the saved position. You still need to check the result, above all citations, arithmetic, and generated files. See [Model handoff](https://github.com/lifishard/wickrunAI/blob/main/docs/MODEL_HANDOFF.md) for how the relay works.
-
-Use an API key from a model provider, or connect an official client you already run on your machine from the desktop model picker. Accounts, subscriptions, and API charges stay with the provider. The Android client runs on its own or remote-controls your computer over the local network.
-
-The interface reads in Simplified Chinese, Traditional Chinese, and English, switchable from the top right. Most reference documents under `docs/` are in Chinese; the concept pages linked above are in English.
-
-## What it can do
-
-| Job | How |
-|---|---|
-| Research | Configure Tavily, Brave, or SearXNG, then read the source links in the answer |
-| Work with files | Add a working directory, then have the model read material and produce documents or spreadsheets; open the result from its file card |
-| Continue a long task | Pause, restart the app, or switch models, then resume from the saved run journal |
-| Drive a browser | Launch the dedicated Chrome instance, sign in to the sites you need, then authorize the model |
-| Code and repository work | Read GitHub repositories, search code, or call an installed Claude Code; run commands under your permission setting |
-| Organize projects | Save shared instructions, reference documents, and prompts for a group of conversations |
-| Use skills | Import a `SKILL.md` skill and call it with `/name` in a conversation |
-| Run on a schedule | Set an interval, daily, weekly, or cron task; it needs the relevant device and services available when it fires |
-| Inspect calls | Review connections, usage, and failures; on a rate limit it waits and retries under the recovery policy |
-
-Models differ in what they support for tool calls, images, and reasoning parameters. On a new endpoint, test the connection first, then try a small task.
+[All release notes](https://github.com/lifishard/wickrunAI-releases/releases)
 
 ## Permissions and data
 
 Tool permissions are set per conversation, and file tools only reach the working directories you name. Command-line and browser tools act on your computer or on websites, so check the task and the target before you authorize them.
 
-On desktop, API keys go into the operating system's encrypted storage where it is available. Configuration, conversations, and task material stay on your machine; when you call a model or a tool, the relevant content goes to the service you configured. Key storage, remote connections, and permission limits are in [Security](https://github.com/lifishard/wickrunAI/blob/main/SECURITY.md).
+On desktop, API keys go into the operating system's encrypted storage where it is available. Configuration, conversations, and task material stay on your machine; when you call a model or a tool, the relevant content goes to the service you configured.
 
 ## Disclaimer
 
 wickrunAI is an independent service and is not affiliated with, endorsed by, or owned by Anthropic, OpenAI, Google, xAI, SenseTime, Moonshot AI, OpenRouter, or any other model provider or service named in this repository. Product names, logos and trademarks are the property of their respective owners and are used here only to describe what this client can connect to.
 
 Connecting to a provider requires your own account and credentials with that provider, and your use of their service is governed by their terms, not by this project's. Accounts, subscriptions, quotas and charges stay with the provider. wickrunAI does not resell access to any of them. The web version relays your requests to the provider you chose, with your own key, and does not store them.
-
-## Google account and cloud sync
-
-Desktop and web keep separate repositories and share one backend. Chats, projects, skills and task history can follow the same Google account. Model API keys stay on each device unless you turn on key sync in the account window. [Setup, import and limits](https://github.com/lifishard/wickrunAI/blob/main/docs/cloud-accounts.md).
-
-Changes and the supported scope of that version: [2.20.5 upgrade notes](https://github.com/lifishard/wickrunAI/blob/main/docs/UPGRADE-2.20.5.md).
-
-## Meeting rooms
-
-The team workspace now includes human-chaired meetings: shared material, referenced replies, constructive disagreement, explicit questions to the user, and confirmed minutes. Meetings never replace independent quality review. Native ChatGPT participation requires separate MCP connection setup and account/client validation; ordinary chats are not automatically awakened. See [meeting room setup and limits](https://github.com/lifishard/wickrunAI/blob/main/docs/MEETING_ROOM.md).
 
 ---
 
