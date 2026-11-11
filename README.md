@@ -48,8 +48,6 @@ wickrunAI puts all the AI you use into one app, on Windows, macOS, Linux, the we
 
 Later you can add a second account to take over when the first runs out, give the AI a folder to work in, or connect the AI apps on your computer from the model picker.
 
-The free tier covers your own keys, one account, local projects and local models. Taking over across accounts, sharing and working together are part of the paid plans, which start with a 14-day free trial. When a plan lapses you are only downgraded and your data stays. The plans page in the app has the current details.
-
 ## Download
 
 <!-- releases-readme:installer -->
